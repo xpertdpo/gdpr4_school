@@ -1,0 +1,239 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+  - var page_loader        = true;
+
+append css
+
+append content
+
+  // Hero
+  section.module-cover.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-overlay="1" data-gradient="1")
+    .container
+
+      .row
+        .col-md-12.text-center
+          p.mb-4: img(src="assets/images/main/logo.png" alt="")
+          p.mb-4.lead Now you can easily create your site with Bright <br> Gulp, SCSS and Pug template engine.
+          a(href="#" class="btn btn-lg btn-circle btn-brand") Get Started
+  // Hero end
+
+  = "\n"
+
+  // Services
+  section.module.pt-0
+    .container
+
+      .row
+        .col-md-12
+          .space(data-mt="-50px")
+          .card.card-xl
+            .card-body
+              .row
+                .col-lg-3.col-md-6
+                  +IconBox("ti-agenda", "Great Documentation", "See how your users experience your website in realtime.", "text-center", true)
+                .col-lg-3.col-md-6
+                  +IconBox("ti-crown", "Live Examples", "See how your users experience your website in realtime.", "text-center", true)
+                .col-lg-3.col-md-6
+                  +IconBox("ti-layers-alt", "Creative Layout", "See how your users experience your website in realtime.", "text-center", true)
+                .col-lg-3.col-md-6
+                  +IconBox("ti-layout", "Responsive Desing", "See how your users experience your website in realtime.", "text-center", true)
+  // Services end
+
+  = "\n"
+
+  // Portfolio
+  section.module.divider-top.pb-0
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 Latest Works.
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mb="60px")
+
+      .row
+        .col-md-12
+          ul.filters.serif
+            li: a(href="#" data-filter="*" class="current") All
+              sup #[small  9]
+            li: a(href="#" data-filter=".branding") Branding
+              sup #[small  3]
+            li: a(href="#" data-filter=".digital") Digital
+              sup #[small  2]
+            li: a(href="#" data-filter=".packaging") Packaging
+              sup #[small  4]
+
+    .container-fluid
+      .row.row-portfolio(data-columns="3")
+        .grid-sizer
+        +PortfolioItem("assets/images/portfolio/1.jpg", "Typography", "branding bg-dark", "Branding")
+        +PortfolioItem("assets/images/portfolio/2.jpg", "Monochrome", "digital bg-dark", "Branding")
+        +PortfolioItem("assets/images/portfolio/3.jpg", "Ellie Cashman", "packaging bg-dark", "Packaging")
+        +PortfolioItem("assets/images/portfolio/4.jpg", "Ellie Cashman", "packaging bg-dark", "Packaging")
+        +PortfolioItem("assets/images/portfolio/5.jpg", "Classic Socks", "digital bg-dark", "Branding")
+        +PortfolioItem("assets/images/portfolio/6.jpg", "White Sleeve", "branding bg-dark", "Digital")
+  // Portfolio end
+
+  = "\n"
+
+  // Services
+  section.module
+    .container
+
+      .row
+        .col-lg-4.col-md-6
+          +IconBox("far fa-file-alt", "Great Documentation", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+        .col-lg-4.col-md-6
+          +IconBox("fab fa-chrome", "Live Examples", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+        .col-lg-4.col-md-6
+          +IconBox("fab fa-angrycreative", "Creative Layout", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+        .col-lg-4.col-md-6
+          +IconBox("far fa-object-ungroup", "Responsive Desing", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+        .col-lg-4.col-md-6
+          +IconBox("fas fa-spinner", "Pug Template Engine", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+        .col-lg-4.col-md-6
+          +IconBox("fab fa-sass", "Gulp & SASS", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+  // Services end
+
+  = "\n"
+
+  // Testimonials
+  section.module.bg-dark.parallax(data-background="" data-overlay="1" data-gradient="1")
+    .container
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row
+        .col-md-10.m-auto
+          .review-slides.owl-carousel
+            +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.")
+            +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.")
+            +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.")
+
+      .row
+        .col-md-12
+          .space(data-mb="60px")
+  // Testimonials end
+
+  = "\n"
+
+  // Pricing
+  section.module.divider-top
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 Ready to start your project?
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row.no-gutters
+        .col-md-4
+          .price-table.mb-4.mb-md-0
+            .price-table-header
+              h2.mb-0 Free
+              span $ 0.00 #[small / Per Month]
+            .price-table-body
+              ul.list-icons
+                li #[i.fas.fa-check ] Staff accounts
+                li #[i.fas.fa-check ] File storage
+                li #[i.fas.fa-check ] Retail Package
+                li #[i.fas.fa-check ] 24/7 support
+                li #[i.fas.fa-check ] Transaction fees
+                li #[i.fas.fa-check ] Fraud analysis
+        .col-md-4
+          .price-table.mb-4.mb-md-0
+            .price-table-header
+              h2.mb-0 Plus
+              span $ 7.90 #[small / Per Month]
+            .price-table-body
+              ul.list-icons
+                li #[i.fas.fa-check ] Staff accounts
+                li #[i.fas.fa-check ] File storage
+                li #[i.fas.fa-check ] Retail Package
+                li #[i.fas.fa-check ] 24/7 support
+                li #[i.fas.fa-check ] Transaction fees
+                li #[i.fas.fa-check ] Fraud analysis
+                li #[i.fas.fa-check ] Manual order creation
+                li #[i.fas.fa-check ] Discount codes
+                li #[i.fas.fa-check ] Website and blog
+        .col-md-4
+          .price-table.price-table-popular.mb-4.mb-md-0
+            .price-table-header
+              h2.mb-0 Premium
+              span $ 12.99 #[small / Per Month]
+            .price-table-body
+              ul.list-icons
+                li #[i.fas.fa-check ] Staff accounts
+                li #[i.fas.fa-check ] File storage
+                li #[i.fas.fa-check ] Retail Package
+                li #[i.fas.fa-check ] 24/7 support
+                li #[i.fas.fa-check ] Transaction fees
+                li #[i.fas.fa-check ] Fraud analysis
+                li #[i.fas.fa-check ] Manual order creation
+                li #[i.fas.fa-check ] Discount codes
+                li #[i.fas.fa-check ] Website and blog
+                li #[i.fas.fa-check ] Free SSL certificate
+                li #[i.fas.fa-check ] Gift cards
+                li #[i.fas.fa-check ] Professional reports
+  // Pricing end
+
+  = "\n"
+
+  // Callout
+  section.maps-container.vh-3.vh-sm-10
+    .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-styles="style-2")
+  // Callout end
+
+  = "\n"
+
+  // Contact
+  section.module.bg-gray.pt-0
+    .container
+
+      .row
+        .col-md-12
+          .space(data-mb="-100px")
+          .card.card-xl.z-index-10
+            .card-body
+              form#contact-form(method="post" novalidate)
+                .row
+                  .col-md-6
+                    .form-group
+                      input.form-control(type="text" name="name" placeholder="Name" required="")
+                      p.help-block.text-danger
+                  .col-md-6
+                    .form-group
+                      input.form-control(type="email" name="email" placeholder="E-mail" required="")
+                      p.help-block.text-danger
+                  .col-md-12
+                    .form-group
+                      input.form-control(type="text" name="subject" placeholder="Subject" required="")
+                      p.help-block.text-danger
+                  .col-md-12
+                    .form-group
+                      textarea.form-control(name="message" placeholder="Message" rows="12" required="")
+                  .col-md-12
+                    input(type="submit" class="btn btn-block btn-brand" value="Send Message")
+              // Ajax response
+              #contact-response.ajax-response.text-center
+
+      .row
+        .col-md-12
+          .space(data-mb="40px")
+
+      .row
+        .col-md-12
+          .text-center
+            p.lead Or send your resume and details to #[a(href="#") jobs@demo.com] for all opportunities.
+  // Contact end

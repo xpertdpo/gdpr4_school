@@ -1,0 +1,197 @@
+//------------------------------------------------------------------
+//- Post masonry
+//------------------------------------------------------------------
+
+mixin PostMasonry(image, title, bg)
+  div(class="card card-xl js-tilt mb-4 " + bg data-background=image)
+    .card-body.mb-10
+      h4: a(href="#")!= title
+    .card-footer
+      a(href="#") Read More &rarr;
+
+//------------------------------------------------------------------
+//- Counters
+//------------------------------------------------------------------
+
+mixin Counter(title, number, icon)
+  .counter
+    if icon
+      .counter-icon
+        span(class=icon)
+    .counter-number
+      h3: .counter-timer(data-from="0" data-to=number) 0
+    .counter-title= title
+
+//------------------------------------------------------------------
+//- Progress Bars
+//------------------------------------------------------------------
+
+mixin Progress(title, counter, color)
+  .progress-item
+    .progress-title
+      =title
+      span.float-right
+        span.progress-number
+        | %
+    .progress
+      .progress-bar(class=color aria-valuenow=counter aria-valuemin="0" aria-valuemax="100")
+
+//------------------------------------------------------------------
+//- Pie Chart
+//------------------------------------------------------------------
+
+mixin PieChart(title, icon, counter, color)
+
+  if (typeof color === 'undefined')
+    - color = "#222222"
+
+  .pie-chart
+    .chart(data-percent=counter data-chart-options='{"barColor":"' + color + '"}')
+      span.chart-text
+        span.bg-brand: i(class=icon)
+    .chart-title
+      h6=title
+    .chart-content
+      p Map where your photos were taken and discover local points of interest. Map where your photos.
+
+//------------------------------------------------------------------
+//- Team
+//------------------------------------------------------------------
+
+mixin team(image, name, role)
+  .team-item
+    .team-image
+      img(src=image alt="")
+      .team-wrap
+        .team-content
+          .team-name= name
+          .team-role= role
+        .team-content-social
+          ul
+            li: a(href="#") #[i.fab.fa-twitter]
+            li: a(href="#") #[i.fab.fa-instagram]
+            li: a(href="#") #[i.fab.fa-pinterest-p]
+
+//------------------------------------------------------------------
+//- Portfolio
+//------------------------------------------------------------------
+
+mixin PortfolioItem(image, title, filter, category)
+  .portfolio-item(class = filter)
+    .portfolio-item-wrapper
+      .portfolio-item-img
+        img(src = image alt="")
+      .portfolio-item-caption
+        h5.portfolio-item-title= title
+        span.portfolio-item-subtitle.serif= category
+      a.portfolio-item-link(href="portfolio-single-1.html")
+
+//------------------------------------------------------------------
+//- Icon Box
+//------------------------------------------------------------------
+
+mixin IconBox(icon, title, content, align, link)
+    if (typeof align === 'undefined')
+        - align = ''
+
+    .icon-box(class=align)
+        .icon-box-icon
+            span(class=icon)
+        .icon-box-title
+            h6= title
+        .icon-box-content
+            p!= content
+        if (link == true)
+            .icon-box-link
+                a(href="#") Read More &rarr;
+
+//------------------------------------------------------------------
+//- Alert
+//------------------------------------------------------------------
+
+mixin Alert(classe)
+  .alert(class=classe)
+    | #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+
+//------------------------------------------------------------------
+//- Testimonials
+//------------------------------------------------------------------
+
+mixin TestimonialsSlider(name, content, icon)
+
+    if (typeof icon === 'undefined')
+        - icon = ''
+
+    .review
+        .review-icons
+            if icon
+                h2.ti-comment-alt
+            else
+                img(src="assets/images/avatar/1.jpg" alt="")
+        .review-content
+            blockquote
+                p!=content
+                footer.blockquote-footer=name
+
+mixin TestimonialsCard(name, content, image)
+  .card.card-lg.mb-5
+    .card-body
+      .media.mb-4
+        img.avatar.mr-3(src=image alt="")
+        .media-body.align-self-center
+          h6.mb-0=name
+          h6.mb-0.small.bold.opacity-4 Lead Architect
+      p.lead= content
+      span.star-rating
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+        i.fas.fa-star
+        i.far.fa-star
+
+//------------------------------------------------------------------
+//- Shop Grid Item
+//------------------------------------------------------------------
+
+mixin ShopGridItem(thumb, title, price, tilt)
+  if (tilt !== true)
+    - var tilt = "js-tilt"
+  else
+    - var tilt = ""
+
+  div(class="card card-xl no-shadow mb-4 " + tilt data-background=thumb)
+    .card-body.mb-10
+      h6.mb-1: a(href="#")=title
+      p=price
+    .card-footer
+      a.text-dark(href="#") Know More
+
+//------------------------------------------------------------------
+//- Shop Cart item
+//------------------------------------------------------------------
+
+mixin CreateCartItem(image, title, price)
+  .row.align-items-center
+    .col.text-center.text-sm-left
+      a(href="#")
+        img.rounded(src=image alt="" width="80")
+    .w-100.d-block.d-sm-none.mb-4
+    .col.text-center.text-sm-left
+      h6.m-b-0: a(href="#")= title
+      p: small Color: black | Size: 36.5
+    .w-100.d-block.d-sm-none.mb-4
+    .col.text-center
+      = price
+    .w-100.d-block.d-sm-none.mb-4
+    .col-auto.m-auto
+      .form-row
+        .col
+          .input-group.input-group-quantity
+            .input-group-prepend
+              button(class="btn btn-sm btn-brand btn-minus" type="button") -
+            input(class="form-control form-control-sm form-quantity" type="text" value="1" readonly)
+            .input-group-append
+              button(class="btn btn-sm btn-brand btn-plus" type="button") +
+        .col-auto.d-none.d-sm-block
+          a(href="#" class="btn btn-sm btn-brand")
+            i.far.fa-trash-alt

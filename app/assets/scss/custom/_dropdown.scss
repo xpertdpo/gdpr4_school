@@ -1,0 +1,37 @@
+
+.dropdown-menu {
+  box-shadow: 0 20px 70px 0 rgba(0, 0, 0, .15);
+
+  @include media-breakpoint-up(lg) {
+    &:before {
+      position: absolute;
+      left: 22px;
+      top: -6px;
+      width: 12px;
+      height: 6px;
+      margin-left: -6px;
+      background-image: url("../images/nav-arrow-up.svg");
+      background-position: 50% 50%;
+      background-size: 12px 6px;
+      background-repeat: no-repeat;
+      content: "";
+      display: block;
+    }
+  }
+}
+
+.navbar .dropdown-menu {
+  &.show{
+    animation: animate-dropdown .3s ease forwards;
+  }
+}
+
+@keyframes animate-dropdown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

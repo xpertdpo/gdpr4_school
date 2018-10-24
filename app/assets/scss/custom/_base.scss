@@ -1,0 +1,174 @@
+//
+// Base
+//
+
+body {
+  overflow-x: hidden;
+}
+
+iframe {
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  &.img-shadow {
+    border-radius: $border-radius;
+    box-shadow: 0 20px 70px 0 rgba(0, 0, 0, .15);
+  }
+}
+
+.shadow {
+  border-radius: $border-radius;
+  box-shadow: 0 20px 70px 0 rgba(0, 0, 0, .15);
+}
+
+.z-index-10 {
+  z-index: 10;
+}
+
+.wrapper {
+  padding-top: $nav-link-height + ($nav-link-padding-y * 2) + rem(4);
+
+  .navbar-transparent + & {
+    padding-top: 0;
+  }
+}
+
+/* Styles for dialog window */
+.code-popup {
+  background: $body-bg;
+  padding: 44px 44px;
+  text-align: left;
+  max-width: 900px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+
+.no-bg {
+  background: transparent !important;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.avatar {
+  border-radius: 100% !important;
+  width: rem(60);
+
+  &.avatar-sm {
+    width: rem(50) !important;
+  }
+
+  &.avatar-lg {
+    width: rem(70) !important;
+  }
+}
+
+.w-auto {
+  min-width: auto;
+  width: auto;
+}
+
+.no-max-width {
+  max-width: inherit !important;
+}
+
+.wave-pulse {
+  margin: 0 auto;
+  height: 700px;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wave-pulse:after,
+.wave-pulse:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(#777777, .7);
+  -webkit-animation: wave-pulse 5.25s linear 5.25s infinite;
+  animation: wave-pulse 5.25s linear 5.25s infinite;
+  opacity: 0;
+}
+
+.wave-pulse:before {
+  -webkit-animation-delay: .75s;
+  animation-delay: .75s;
+}
+
+.wave-pulse-2:before {
+  -webkit-animation-delay: 2.25s;
+  animation-delay: 2.25s;
+}
+
+.wave-pulse-2:after {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.wave-pulse-3:before {
+  -webkit-animation-delay: 3.75s;
+  animation-delay: 3.75s;
+}
+
+.wave-pulse-3:after {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+@-webkit-keyframes wave-pulse {
+
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0
+  }
+
+}
+
+@keyframes wave-pulse {
+
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0
+  }
+
+}

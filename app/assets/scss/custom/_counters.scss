@@ -1,0 +1,21 @@
+//
+// Сounters
+//
+
+.counter {
+  margin-bottom: $spacer;
+
+  .counter-icon {
+    font-size: rem(38);
+    color: theme-color("brand");
+  }
+
+  .counter-number h3 {
+    font-size: rem(50);
+    margin: 0;
+  }
+
+  .counter-title {
+    letter-spacing: rem(.5);
+  }
+}

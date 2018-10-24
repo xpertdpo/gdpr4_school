@@ -1,0 +1,186 @@
+//
+// Type
+//
+
+a {
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
+
+  h1 > &, .h1 > &,
+  h2 > &, .h2 > &,
+  h3 > &, .h3 > &,
+  h4 > &, .h4 > &,
+  h5 > &, .h5 > &,
+  h6 > &, .h6 > & {
+    color: $headings-color;
+
+    &:hover,
+    &:focus {
+      color: rgba($headings-color, .7);
+    }
+  }
+}
+
+h1, .h1 {
+  font-weight: $h1-font-weight;
+}
+
+h2, .h2 {
+  font-weight: $h2-font-weight;
+}
+
+h3, .h3 {
+  font-weight: $h3-font-weight;
+}
+
+h4, .h4 {
+  font-weight: $h4-font-weight;
+}
+
+h5, .h5 {
+  font-weight: $h5-font-weight;
+}
+
+h6, .h6 {
+  font-weight: $h6-font-weight;
+
+  &.text-uppercase {
+    letter-spacing: rem(2);
+  }
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+b,
+.bold,
+strong,
+.strong {
+  font-weight: bold;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border-radius: $border-radius;
+  font-size: 100%;
+  padding: 20px;
+
+  code[class*=language-] {
+    padding-top: 6px;
+    padding-bottom: 8px;
+  }
+}
+
+
+.lead {
+  letter-spacing: rem(.3px);
+}
+
+blockquote {
+  font-size: $blockquote-font-size;
+  color: $headings-color;
+
+  p {
+    margin-bottom: rem(6);
+  }
+}
+
+.blockquote-footer {
+  font-weight: 400;
+}
+
+.table-responsive {
+  margin-bottom: $spacer;
+
+  .table {
+    margin-bottom: 0;
+  }
+}
+
+.nav-sidebar {
+  transform: translate3d(0, 0, 0);
+
+  a {
+    padding: .4rem 1rem;
+    display: block;
+    width: 100%;
+    color: $headings-color;
+
+    &.active,
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+.info-list {
+
+  > li {
+    table-layout: fixed;
+    padding: 1px 0;
+    display: table;
+
+    .info-list-title {
+      min-width: 108px;
+      display: table-cell;
+      font-weight: 600;
+      color: $headings-color;
+    }
+  }
+
+  a {
+    color: $body-color;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+  }
+}
+
+.arrow-list {
+  list-style: none;
+  padding: 0;
+
+  > li {
+    margin: 0 0 7px;
+
+    &::before {
+      text-transform: none;
+      font-family: 'themify';
+      font-variant: normal;
+      font-weight: normal;
+      font-style: normal;
+      font-size: rem(12);
+      line-height: 1.8;
+      display: inline-block;
+      content: "\e628";
+      margin-right: rem(12);
+      position: relative;
+      top: 0px;
+    }
+  }
+}
+
+.list-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    padding: rem(4px) 0;
+
+    > i {
+      height: 13px;
+      width: 15px;
+      font-size: rem(12px);
+      color: theme-color("brand");
+      margin-right: rem(5px);
+    }
+  }
+}

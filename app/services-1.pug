@@ -1,0 +1,143 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  section.module-cover.bg-dark.parallax(data-background="assets/images/module-3.jpg" data-overlay="0.4" data-gradient="0")
+    .container
+
+      .row
+        .col-md-12.m-auto.text-center
+          h1 Website Promotion
+          p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque eget mi at eros venenatis
+  // Hero end
+
+  = "\n"
+
+  // Video
+  section.module
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 We Design the Future.
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row
+        .col-md-12
+          .popup-video
+            img(src="assets/images/main/6.jpg" alt="")
+            a(href="https://www.youtube.com/watch?v=0aCbYxJ9gus" class="popup-video-play")
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row
+        .col-md-6
+          +Progress("App Development", "25", "bg-brand")
+          +Progress("Node Development", "35", "bg-brand")
+          +Progress("Theme Development", "45", "bg-brand")
+          +Progress("Plugin Development", "55", "bg-brand")
+        .col-md-6
+          +Progress("App Development", "25", "bg-brand")
+          +Progress("Node Development", "35", "bg-brand")
+          +Progress("Theme Development", "45", "bg-brand")
+          +Progress("Plugin Development", "55", "bg-brand")
+  // Video end
+
+  = "\n"
+
+  // Services
+  section.module.divider-top
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 Special Treats.
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row
+        .col-lg-3.col-md-6
+          +IconBox("ti-agenda", "Great Documentation", "See how your users experience your website in realtime.", "text-center", true)
+        .col-lg-3.col-md-6
+          +IconBox("ti-crown", "Live Examples", "See how your users experience your website in realtime.", "text-center", true)
+        .col-lg-3.col-md-6
+          +IconBox("ti-layers-alt", "Creative Layout", "See how your users experience your website in realtime.", "text-center", true)
+        .col-lg-3.col-md-6
+          +IconBox("ti-layout", "Responsive Desing", "See how your users experience your website in realtime.", "text-center", true)
+  // Services end
+
+  = "\n"
+
+  // Features
+  section.module.divider-top
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 What make us so Special.
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row
+        .col-md-4
+          .card.card-lg.border.no-shadow
+            img(src="assets/images/features/1.jpg" alt="")
+            .card-body
+              h6 Web Design
+              p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+              a(href="#") Read more &rarr;
+        .col-md-4
+          .card.card-lg.border.no-shadow
+            img(src="assets/images/features/2.jpg" alt="")
+            .card-body
+              h6 Plugin Development
+              p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+              a(href="#") Read more &rarr;
+        .col-md-4
+          .card.card-lg.border.no-shadow
+            img(src="assets/images/features/3.jpg" alt="")
+            .card-body
+              h6 Theme Development
+              p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+              a(href="#") Read more &rarr;
+
+      .row
+        .col-md-12
+          .space(data-mb="20px")
+
+      .row
+        .col-md-10.m-auto
+          .owl-carousel.clients-carousel(data-carousel-options='{"dots": true}')
+            .client
+              img(src="assets/images/clients/1.png" alt="")
+            .client
+              img(src="assets/images/clients/2.png" alt="")
+            .client
+              img(src="assets/images/clients/3.png" alt="")
+            .client
+              img(src="assets/images/clients/4.png" alt="")
+            .client
+              img(src="assets/images/clients/5.png" alt="")
+            .client
+              img(src="assets/images/clients/6.png" alt="")
+            .client
+              img(src="assets/images/clients/7.png" alt="")
+  // Features end

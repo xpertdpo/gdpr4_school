@@ -1,0 +1,203 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = false;
+
+append css
+
+append content
+
+  // Shop Single
+  section.module
+    .container
+
+      .row
+        // Item Photos
+        .col-lg-6
+            .row.mb-4
+              .col-md-12
+                a(href="assets/images/shop/11.jpg" class="shop-popup")
+                  img(class="w-100" src="assets/images/shop/11.jpg" alt="")
+            .row
+              .col-sm-3
+                a(href="assets/images/shop/12.jpg" class="shop-popup")
+                  img(class="w-100 mb-5" src="assets/images/shop/12.jpg" alt="")
+              .col-sm-3
+                a(href="assets/images/shop/13.jpg" class="shop-popup")
+                  img(class="w-100 mb-5" src="assets/images/shop/13.jpg" alt="")
+              .col-sm-3
+                a(href="assets/images/shop/14.jpg" class="shop-popup")
+                  img(class="w-100 mb-5" src="assets/images/shop/14.jpg" alt="")
+              .col-sm-3
+                a(href="assets/images/shop/15.jpg" class="shop-popup")
+                  img(class="w-100 mb-5" src="assets/images/shop/15.jpg" alt="")
+        // Item Photos end
+
+        // Item Desc
+        .col-lg-6
+          .pl-lg-4
+
+            .mb-4
+              h1.mb-0 Classic Chair
+              span.star-rating
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.far.fa-star
+            .mb-4
+              h2 $100.00
+            .mb-5
+              p.lead Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern personalized look.
+            .mb-5
+              .form-row
+                .col-md-4
+                  .input-group.input-group-quantity.mb-3
+                    .input-group-prepend
+                      button(class="btn btn-sm btn-brand btn-minus" type="button") -
+                    input(class="form-control form-control-sm form-quantity no-max-width" type="text" value="1" readonly)
+                    .input-group-append
+                      button(class="btn btn-sm btn-brand btn-plus" type="button") +
+                .col-md-8
+                  a(href="#" class="btn btn-block-mobile btn-sm btn-brand") Add to cart
+
+            hr.mb-4
+
+            .info-list.mb-4
+              li
+                span.info-list-title SKU:
+                span 213496
+              li
+                span.info-list-title Category:
+                span #[a(href="#") Interior]
+              li
+                span.info-list-title Tags:
+                span #[a(href="#") Chair], #[a(href="#") Interior]
+
+            hr.mb-4
+
+            .info-list
+              li
+                span.info-list-title Share:
+                span
+                  ul.social-icons
+                    li: a(href="#") #[i.ti-twitter]
+                    li: a(href="#") #[i.ti-instagram]
+                    li: a(href="#") #[i.ti-pinterest]
+        // Item Desc end
+  // Shop Single end
+
+  = "\n"
+
+  // Tabs
+  section.module.p-0
+    .container-fluid
+
+      .row
+        .col-md-12
+          ul.nav.nav-tabs.justify-content-center
+            li.nav-item: a.nav-link.active(data-toggle="tab" href="#shop-description"): h6 Description
+            li.nav-item: a.nav-link(data-toggle="tab" href="#shop-info"): h6 Additional information
+            li.nav-item: a.nav-link(data-toggle="tab" href="#shop-comment"): h6 Reviews
+
+    .container
+      .row
+        .col-md-12
+          .shop-tab-content.tab-content.pt-5.pb-5
+            #shop-description.tab-pane.show.active
+              p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi.
+            #shop-info.tab-pane
+              table.table.table-striped.table-bordered
+                thead
+                  tr
+                    th Size
+                    th Measurement
+                tbody
+                  tr
+                    th Small
+                    td 10" Neck / 8" Sleeve
+                  tr
+                    th Medium
+                    td 12" Neck / 9" Sleeve
+                  tr
+                    th Large
+                    td 14" Neck / 10" Sleeve
+            #shop-comment.tab-pane
+              .row.mb-5
+                .col-md-12
+                  .card.border.no-shadow
+                    .card-header
+                      span.star-rating
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.far.fa-star
+                    .card-body
+                      .media
+                        img.avatar.mr-3(src="assets/images/avatar/1.jpg" alt="")
+                        .media-body.align-self-center
+                          h6 Henry Cain
+                          p I haven’t ordered nice shoes online before and wasn’t very confident that it would work out with sizing and such, but when I got these and tried them on they fit incredibly and they look amazing.
+                  .card.border.no-shadow
+                    .card-header
+                      span.star-rating
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.far.fa-star
+                    .card-body
+                      .media
+                        img.avatar.mr-3(src="assets/images/avatar/2.jpg" alt="")
+                        .media-body.align-self-center
+                          h6 Emma Connor
+                          p I haven’t ordered nice shoes online before and wasn’t very confident that it would work out with sizing and such, but when I got these and tried them on they fit incredibly and they look amazing.
+              .row
+                .col-md-12
+                  .mb-4
+                    h4 Your review
+                    p Your email address will not be published. Required fields are marked *
+                  form.row
+                    .form-group.col-md-12
+                      select.form-control
+                        option(selected="selected") Your Rating
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+                    .form-group.col-md-12
+                      textarea(class="form-control" rows="8" placeholder="Comment")
+                    .form-group.col-md-6
+                        input(type="text" class="form-control" placeholder="Name")
+                    .form-group.col-md-6
+                        input(type="text" class="form-control" placeholder="Email")
+                    .col-md-12
+                      a(class="btn btn-brand btn-block-mobile" href="#") Submit Review
+  // Tabs end
+
+  = "\n"
+
+  // Related Items
+  section.module.divider-top
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 You may also like:
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mb="80px")
+
+      .row
+        .col-md-12
+          .owl-carousel.shop-carousel
+            +ShopGridItem("assets/images/shop/1.jpg", "Classic Chair", "$20.00", true)
+            +ShopGridItem("assets/images/shop/5.jpg", "Solo Headphones", "$30.00", true)
+            +ShopGridItem("assets/images/shop/4.jpg", "Amber Body Lotion", "$35.00", true)
+            +ShopGridItem("assets/images/shop/6.jpg", "Ceramic Watch", "$18.00", true)
+            +ShopGridItem("assets/images/shop/7.jpg", "Wooden Bathroom Set", "$12.00", true)
+  // Related Items end

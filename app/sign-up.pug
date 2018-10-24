@@ -1,0 +1,29 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+  section.module-cover.bg-dark.parallax.fullscreen.text-center(data-background="" data-overlay="1" data-gradient="1")
+    .container
+
+      .row
+          .col-lg-4.col-md-6.m-auto
+            .mb-4
+              h5 Create a new account
+            .mb-4
+              form(method="post")
+                .form-group
+                  input.form-control(type="text" placeholder="Name")
+                .form-group
+                  input.form-control(type="email" placeholder="E-mail")
+                .form-group
+                  input.form-control(type="password" placeholder="Pasword")
+                .form-group
+                  input.form-control(type="password" placeholder="Confirm password")
+                .form-group
+                  button(type="submit" class="btn btn-block btn-round btn-brand") Sign Up
+            p: small By signing up, you agree to the #[a(href="#") terms of service]

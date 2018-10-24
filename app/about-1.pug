@@ -1,0 +1,165 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  section.module-cover.bg-dark.parallax(data-background="assets/images/module-7.jpg" data-overlay="0.6")
+    .container
+
+      .row
+        .col-md-12.m-auto.text-center
+          h1 We are a creative agency <br> based in New York
+          p.lead Creating digital products for creative people
+  // Hero end
+
+  = "\n"
+
+  // Bars
+  section.module
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 We Design the Future.
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row
+        .col-md-6
+          +Progress("App Development", "25", "bg-brand")
+          +Progress("Node Development", "35", "bg-brand")
+          +Progress("Theme Development", "45", "bg-brand")
+          +Progress("Plugin Development", "55", "bg-brand")
+        .col-md-6
+          +Progress("App Development", "25", "bg-brand")
+          +Progress("Node Development", "35", "bg-brand")
+          +Progress("Theme Development", "45", "bg-brand")
+          +Progress("Plugin Development", "55", "bg-brand")
+  // Bars end
+
+  = "\n"
+
+  // Images
+  section.module.py-0
+    .container-fluid.p-0
+
+      .row.no-gutters
+        .col-md-12
+          .owl-carousel.image-carousel
+            a(href="assets/images/main/2.jpg" class="gallery")
+              img(src="assets/images/main/2.jpg" alt="")
+            a(href="assets/images/main/3.jpg" class="gallery")
+              img(src="assets/images/main/3.jpg" alt="")
+            a(href="assets/images/main/4.jpg" class="gallery")
+              img(src="assets/images/main/4.jpg" alt="")
+            a(href="assets/images/main/5.jpg" class="gallery")
+              img(src="assets/images/main/5.jpg" alt="")
+  // Images end
+
+  = "\n"
+
+  // Services
+  section.module
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 Customer-centric Mindset.
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row.align-items-center
+        .col-lg-4
+          .wave-pulse.wave-pulse-1
+          .wave-pulse.wave-pulse-2
+          .wave-pulse.wave-pulse-3
+          p.text-center: img(class="relative z-index-10" src="assets/images/main/iphone.png" alt="")
+        .col-lg-4
+          +IconBox("icon-fire icons", "Live Examples", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+          +IconBox("icon-diamond icons", "Responsive Desing", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+        .col-lg-4
+          +IconBox("icon-layers icons", "Creative Layout", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+          +IconBox("icon-settings icons", "Gulp & SASS", "See how your users experience your website in realtime or view trends to see any changes.", "", true)
+  // Services end
+
+  = "\n"
+
+  // Testimonials
+  section.module.bg-dark.parallax(data-background="" data-overlay="1" data-gradient="1")
+      .container
+          .row
+            .col-md-12
+              .space(data-mt="60px")
+
+          .row
+              .col-md-10.m-auto
+                  .review-slides.owl-carousel
+                      +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.")
+                      +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.")
+                      +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.")
+          .row
+            .col-md-12
+              .space(data-mb="60px")
+  // Testimonials end
+
+  = "\n"
+
+  // Team
+  section.module
+    .container
+
+      .row
+        .col-md-10.col-lg-6.m-auto.text-center
+          h2 Meet the Awesome People.
+          p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+      .row
+        .col-md-12
+          .space(data-mt="60px")
+
+      .row
+        .col-md-4
+          +team("assets/images/team/2.jpg", "Emma Connor", "Designer")
+        .col-md-4
+          +team("assets/images/team/3.jpg", "Richard Bauer", "Developer")
+        .col-md-4
+          +team("assets/images/team/1.jpg", "Emma Connor", "Designer")
+        .col-md-4
+          +team("assets/images/team/4.jpg", "Richard Bauer", "Developer")
+        .col-md-4
+          +team("assets/images/team/5.jpg", "Richard Bauer", "Developer")
+        .col-md-4
+          +team("assets/images/team/6.jpg", "Richard Bauer", "Developer")
+
+      .row
+        .col-md-12
+          .space(data-mb="40px")
+
+      .row
+        .col-md-10.m-auto
+          .owl-carousel.clients-carousel(data-carousel-options='{"dots": true}')
+            .client
+              img(src="assets/images/clients/1.png" alt="")
+            .client
+              img(src="assets/images/clients/2.png" alt="")
+            .client
+              img(src="assets/images/clients/3.png" alt="")
+            .client
+              img(src="assets/images/clients/4.png" alt="")
+            .client
+              img(src="assets/images/clients/5.png" alt="")
+            .client
+              img(src="assets/images/clients/6.png" alt="")
+            .client
+              img(src="assets/images/clients/7.png" alt="")

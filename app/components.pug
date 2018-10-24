@@ -1,0 +1,1486 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  section.module-cover.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-overlay="1" data-gradient="1")
+    .container
+
+      .row.align-items-center.text-center
+        .col-md-12
+          h2 Bright Components
+          p.lead See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.
+  // Hero end
+
+  = "\n"
+
+  section.module
+    .container
+
+      .row
+        .col-md-9
+
+          //- Alert -----------------------------
+          .component-block#alert
+            .mb-5
+              h3 Alerts
+              p.lead Use alert to show users important messages or provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. #[a(href="https://getbootstrap.com/docs/4.0/components/alerts/") More info].
+            .mb-5
+              +Alert("alert-brand")
+              +Alert("alert-primary")
+              +Alert("alert-secondary")
+              +Alert("alert-success")
+              +Alert("alert-danger")
+              +Alert("alert-warning")
+              +Alert("alert-info")
+              +Alert("alert-light")
+              +Alert("alert-dark")
+            .mb-5
+              a.popup-code(href="#code-alert") Show code &rarr;
+
+            #code-alert.code-popup.zoom-anim-dialog.mfp-hide
+              p Example:
+              pre
+                code.language-pug
+                  |.alert.alert-brand
+                  |   #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+              pre
+                code.language-pug
+                  |.alert.alert-primary
+                  |   #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+              pre
+                code.language-pug
+                  |.alert.alert-secondary
+                  |   #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+              pre
+                code.language-pug
+                  |.alert.alert-danger
+                  |   #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+              pre
+                code.language-pug
+                  |.alert.alert-warning
+                  |   #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+              pre
+                code.language-pug
+                  |.alert.alert-info
+                  |   #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+              pre
+                code.language-pug
+                  |.alert.alert-light
+                  |   #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+              pre
+                code.language-pug
+                  |.alert.alert-dark
+                  |   #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+
+          //- Accordion -------------------------
+          .component-block.mb-5#accordion
+            .mb-5
+              hr.mb-5
+              h3 Accordion
+              p.lead This is a vertically stacked list of items. You can show reveal the content associated with that item.
+            .mb-5
+              #accordion1.accordion.accordion-brand
+                .accordion-item
+                  .accordion-item-header
+                    h6: a(class="accordion-link" data-toggle="collapse" href="#collapse-1") What are my payment options?
+                  #collapse-1.collapse.show(data-parent="#accordion1")
+                    .accordion-item-body
+                      p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+                .accordion-item
+                  .accordion-item-header
+                    h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-2") What are my payment options?
+                  #collapse-2.collapse(data-parent="#accordion1")
+                    .accordion-item-body
+                      p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+                .accordion-item
+                  .accordion-item-header
+                    h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-3") What are my payment options?
+                  #collapse-3.collapse(data-parent="#accordion1")
+                    .accordion-item-body
+                      p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+            .mb-5
+              #accordion2.accordion.accordion-dark
+                .accordion-item
+                    .accordion-item-header
+                        h6: a(class="accordion-link" data-toggle="collapse" href="#collapse-4") What are my payment options?
+                    #collapse-4.collapse.show(data-parent="#accordion2")
+                        .accordion-item-body
+                            p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+                .accordion-item
+                    .accordion-item-header
+                        h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5") What are my payment options?
+                    #collapse-5.collapse(data-parent="#accordion2")
+                        .accordion-item-body
+                            p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+                .accordion-item
+                    .accordion-item-header
+                        h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-6") What are my payment options?
+                    #collapse-6.collapse(data-parent="#accordion2")
+                        .accordion-item-body
+                            p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+            .mb-5
+              a.popup-code(href="#code-accordion") Show code &rarr;
+              #code-accordion.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |#accordion1.accordion.accordion-brand
+                    |   .accordion-item
+                    |     .accordion-item-header
+                    |       h6: a(class="accordion-link" data-toggle="collapse" href="#collapse-1") What are my payment options?
+                    |     #collapse-1.collapse.show(data-parent="#accordion1")
+                    |       .accordion-item-body
+                    |         p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+                    |   .accordion-item
+                    |     .accordion-item-header
+                    |       h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-2") What are my payment options?
+                    |     #collapse-2.collapse(data-parent="#accordion1")
+                    |       .accordion-item-body
+                    |         p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+                    |   .accordion-item
+                    |     .accordion-item-header
+                    |       h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-3") What are my payment options?
+                    |     #collapse-3.collapse(data-parent="#accordion1")
+                    |       .accordion-item-body
+                    |         p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+
+          //- Buttons ---------------------------
+          .component-block#buttons
+            .mb-5
+              hr.mb-5
+              h3 Buttons
+              p.lead You can use default Bootstrap buttons colors and we added our own button colors. #[a(href="https://getbootstrap.com/docs/4.0/components/buttons/") More info].
+            .mb-5
+              .btn-list
+                a(class="btn btn-brand" href="#") Buttons
+                a(class="btn btn-primary" href="#") Buttons
+                a(class="btn btn-secondary" href="#") Buttons
+                a(class="btn btn-success" href="#") Buttons
+                a(class="btn btn-danger" href="#") Buttons
+                a(class="btn btn btn-warning" href="#") Buttons
+                a(class="btn btn-info" href="#") Buttons
+                a(class="btn btn-light" href="#") Buttons
+                a(class="btn btn-dark" href="#") Buttons
+                a(class="btn btn-outline-brand" href="#") Buttons
+                a(class="btn btn-outline-primary" href="#") Buttons
+                a(class="btn btn-outline-secondary" href="#") Buttons
+                a(class="btn btn-outline-success" href="#") Buttons
+                a(class="btn btn-outline-danger" href="#") Buttons
+                a(class="btn btn-outline-warning" href="#") Buttons
+                a(class="btn btn-outline-info" href="#") Buttons
+                a(class="btn btn-outline-dark" href="#") Buttons
+                a(class="btn btn-outline-light" href="#") Buttons
+            .mb-5
+              .btn-list
+                a(class="btn btn-circle btn-brand" href="#") Buttons
+                a(class="btn btn-circle btn-primary" href="#") Buttons
+                a(class="btn btn-circle btn-secondary" href="#") Buttons
+                a(class="btn btn-circle btn-success" href="#") Buttons
+                a(class="btn btn-circle btn-danger" href="#") Buttons
+                a(class="btn btn-circle btn btn-warning" href="#") Buttons
+                a(class="btn btn-circle btn-info" href="#") Buttons
+                a(class="btn btn-circle btn-light" href="#") Buttons
+                a(class="btn btn-circle btn-dark" href="#") Buttons
+                a(class="btn btn-circle btn-outline-brand" href="#") Buttons
+                a(class="btn btn-circle btn-outline-primary" href="#") Buttons
+                a(class="btn btn-circle btn-outline-secondary" href="#") Buttons
+                a(class="btn btn-circle btn-outline-success" href="#") Buttons
+                a(class="btn btn-circle btn-outline-danger" href="#") Buttons
+                a(class="btn btn-circle btn-outline-warning" href="#") Buttons
+                a(class="btn btn-circle btn-outline-info" href="#") Buttons
+                a(class="btn btn-circle btn-outline-dark" href="#") Buttons
+                a(class="btn btn-circle btn-outline-light" href="#") Buttons
+            .mb-5
+              .btn-list
+                a(class="btn btn-circle btn-brand" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-primary" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-secondary" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-success" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-danger" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn btn-warning" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-info" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-light" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-dark" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-brand" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-primary" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-secondary" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-success" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-danger" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-warning" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-info" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-dark" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                a(class="btn btn-circle btn-outline-light" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+            .mb-5
+              a.popup-code(href="#code-buttons") Show code &rarr;
+              #code-buttons.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |// Colors
+                    |a(class="btn btn-brand" href="#") Buttons
+                    |a(class="btn btn-primary" href="#") Buttons
+                    |a(class="btn btn-secondary" href="#") Buttons
+                    |a(class="btn btn-success" href="#") Buttons
+                    |a(class="btn btn-danger" href="#") Buttons
+                    |a(class="btn btn btn-warning" href="#") Buttons
+                    |a(class="btn btn-info" href="#") Buttons
+                    |a(class="btn btn-light" href="#") Buttons
+                    |a(class="btn btn-dark" href="#") Buttons
+                    |
+                    |// Outline Buttons
+                    |a(class="btn btn-outline-brand" href="#") Buttons
+                    |a(class="btn btn-outline-primary" href="#") Buttons
+                    |a(class="btn btn-outline-secondary" href="#") Buttons
+                    |a(class="btn btn-outline-success" href="#") Buttons
+                    |a(class="btn btn-outline-danger" href="#") Buttons
+                    |a(class="btn btn-outline-warning" href="#") Buttons
+                    |a(class="btn btn-outline-info" href="#") Buttons
+                    |a(class="btn btn-outline-dark" href="#") Buttons
+                    |a(class="btn btn-outline-light" href="#") Buttons
+                    |
+                    |// Circle Buttons
+                    |a(class="btn btn-circle btn-brand" href="#") Buttons
+                    |
+                    |// Button with icon
+                    |a(class="btn btn-circle btn-brand" href="#")
+                    |   span.btn-icon-left.far.fa-gem
+                    |   |Buttons
+                    |a(class="btn btn-circle btn-brand" href="#")
+                    |   |Buttons
+                    |   span.btn-icon-right.far.fa-gem
+                    |
+                    |// Button Sizes
+                    |a(class="btn btn-brand btn-lg" href="#") Large button
+                    |a(class="btn btn-brand" href="#") Default Button
+                    |a(class="btn btn-brand btn-sm" href="#") Small button
+
+          //- Buttons Sizes ---------------------
+          .component-block#button_sizes
+            .mb-5
+              hr.mb-5
+              h3 Button Sizes
+              p.lead You can use three different sizes of buttons. Large, small and default buttons. #[a(href="https://getbootstrap.com/docs/4.0/components/buttons/#sizes") More info].
+            .mb-5
+              .btn-list
+                a(class="btn btn-brand btn-lg" href="#") Large button
+                a(class="btn btn-brand" href="#") Default Button
+                a(class="btn btn-brand btn-sm" href="#") Small button
+
+          //- Breadcrumb ------------------------
+          .component-block#breadcrumb
+            .mb-5
+              hr.mb-5
+              h3 Breadcrumb
+              p.lead Use this shortcode to show current page's location. #[a(href="https://getbootstrap.com/docs/4.0/components/breadcrumb/") More info].
+            .mb-5
+              nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                  li.breadcrumb-item.active(aria-current='page') Home
+              nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item.active(aria-current='page') Library
+              nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item
+                    a(href='#') Library
+                  li.breadcrumb-item.active(aria-current='page') Data
+            .mb-5
+              a.popup-code(href="#code-breadcrumb") Show code &rarr;
+              #code-breadcrumb.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |nav(aria-label='breadcrumb')
+                    |  ol.breadcrumb
+                    |    li.breadcrumb-item
+                    |      a(href='#') Home
+                    |    li.breadcrumb-item
+                    |      a(href='#') Library
+                    |    li.breadcrumb-item.active(aria-current='page') Data
+
+          //- Card ------------------------------
+          .component-block#card
+            .mb-5
+              hr.mb-5
+              h3 Cards
+              p.lead Keep your content in card container with multiple variants and options.
+            .mb-5
+              .row
+                .col-md-6
+                  .card.card-lg
+                    img.card-img-top(src="assets/images/blog/3.jpg" alt="")
+                    .card-body
+                      h5.card-title Card title
+                      p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                      a.btn.btn-primary(href='#') Go somewhere
+                .col-md-6
+                  .card.card-lg
+                    img.card-img-top(src="assets/images/blog/5.jpg" alt="")
+                    .card-body
+                      h5.card-title Card title
+                      p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                      a.btn.btn-primary(href='#') Go somewhere
+            .mb-5
+              a.popup-code(href="#code-card") Show code &rarr;
+              #code-card.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-md-6
+                    |     .card.card-lg
+                    |       img.card-img-top(src="assets/images/blog/3.jpg" alt="")
+                    |       .card-body
+                    |         h5.card-title Card title
+                    |         p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                    |         a.btn.btn-primary(href='#') Go somewhere
+                    |   .col-md-6
+                    |     .card.card-lg
+                    |       img.card-img-top(src="assets/images/blog/3.jpg" alt="")
+                    |       .card-body
+                    |         h5.card-title Card title
+                    |         p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                    |         a.btn.btn-primary(href='#') Go somewhere
+
+          //- Card ------------------------------
+          .component-block#card_shop
+            .mb-5
+              hr.mb-5
+              h3 Cards - Shop
+              p.lead Special card modification for shop's items.
+            .mb-5
+              .row
+                .col-md-6
+                  +ShopGridItem("assets/images/shop/1.jpg", "Classic Chair", "$20.00")
+                .col-md-6
+                  +ShopGridItem("assets/images/shop/5.jpg", "Solo Headphones", "$30.00")
+            .mb-5
+              a.popup-code(href="#code-card_shop") Show code &rarr;
+              #code-card_shop.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-md-6
+                    |     +ShopGridItem("assets/images/shop/1.jpg", "Classic Chair", "$20.00")
+                    |   .col-md-6
+                    |     +ShopGridItem("assets/images/shop/5.jpg", "Solo Headphones", "$30.00")
+
+          //- Card Posts ------------------------
+          .component-block#card_posts
+            .mb-5
+              hr.mb-5
+              h3 Cards - Posts
+              p.lead Special card modification for blog's posts.
+            .mb-5
+              .row.card-masonry
+                .col-md-6
+                  +PostMasonry("assets/images/blog/5.jpg", "Explains how singing in the car can boost your<br> mental health.", "bg-brand")
+                .col-md-6
+                  +PostMasonry("assets/images/blog/3.jpg", "Explains how singing in the car can boost your<br> mental health.", "bg-danger")
+            .mb-5
+              a.popup-code(href="#code-card_posts") Show code &rarr;
+              #code-card_posts.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row.card-masonry
+                    |   .col-md-6
+                    |     +PostMasonry("assets/images/blog/5.jpg", "Explains how singing in the car can boost your<br> mental health.", "bg-brand")
+                    |   .col-md-6
+                    |     +PostMasonry("assets/images/blog/3.jpg", "Explains how singing in the car can boost your<br> mental health.", "bg-danger")
+
+          //- Carousel --------------------------
+          .component-block#carousel_image
+            .mb-5
+              hr.mb-5
+              h3 Carousel
+              p.lead Simple image carousel. You can enable or disable navigation, dots and other options. We use owl-carousel JS plugin. Plugin #[a(href="https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html") options].
+            .mb-5
+              .owl-carousel.image-carousel
+                a(href="assets/images/main/2.jpg" class="gallery")
+                  img(src="assets/images/main/2.jpg" alt="")
+                a(href="assets/images/main/3.jpg" class="gallery")
+                  img(src="assets/images/main/3.jpg" alt="")
+                a(href="assets/images/main/4.jpg" class="gallery")
+                  img(src="assets/images/main/4.jpg" alt="")
+                a(href="assets/images/main/5.jpg" class="gallery")
+                  img(src="assets/images/main/5.jpg" alt="")
+            .mb-5
+              a.popup-code(href="#code-carousel_image") Show code &rarr;
+              #code-carousel_image.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.owl-carousel.image-carousel
+                    |   a(href="assets/images/main/2.jpg" class="gallery")
+                    |     img(src="assets/images/main/2.jpg" alt="")
+                    |   a(href="assets/images/main/3.jpg" class="gallery")
+                    |     img(src="assets/images/main/3.jpg" alt="")
+                    |   a(href="assets/images/main/4.jpg" class="gallery")
+                    |     img(src="assets/images/main/4.jpg" alt="")
+                    |   a(href="assets/images/main/5.jpg" class="gallery")
+                    |     img(src="assets/images/main/5.jpg" alt="")
+
+          //- Clients ---------------------------
+          .component-block#clients
+            .mb-5
+              hr.mb-5
+              h3 Clients
+              p.lead Show to users of your site customers with whom you worked - this will cause them more confidence. Plugin #[a(href="https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html") options].
+            .mb-5
+              .owl-carousel.clients-carousel(data-carousel-options='{"dots": false}')
+                .client
+                  img(src="assets/images/clients/1.png" alt="")
+                .client
+                  img(src="assets/images/clients/2.png" alt="")
+                .client
+                  img(src="assets/images/clients/3.png" alt="")
+                .client
+                  img(src="assets/images/clients/4.png" alt="")
+                .client
+                  img(src="assets/images/clients/5.png" alt="")
+                .client
+                  img(src="assets/images/clients/6.png" alt="")
+                .client
+                  img(src="assets/images/clients/7.png" alt="")
+            .mb-5
+              a.popup-code(href="#code-clients") Show code &rarr;
+              #code-clients.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.owl-carousel.clients-carousel(data-carousel-options='{"dots": false}')
+                    |   .client
+                    |     img(src="assets/images/clients/1.png" alt="")
+                    |   .client
+                    |     img(src="assets/images/clients/2.png" alt="")
+                    |   .client
+                    |     img(src="assets/images/clients/3.png" alt="")
+                    |   .client
+                    |     img(src="assets/images/clients/4.png" alt="")
+                    |   .client
+                    |     img(src="assets/images/clients/5.png" alt="")
+                    |   .client
+                    |     img(src="assets/images/clients/6.png" alt="")
+                    |   .client
+                    |     img(src="assets/images/clients/7.png" alt="")
+
+          //- Counters --------------------------
+          .component-block#counters
+            .mb-5
+              hr.mb-5
+              h3 Counters
+              p.lead Show your customers your business performance or just fun facts with our counter component. You can use "text-align" classes to align text in counter. #[a(href="https://getbootstrap.com/docs/4.0/utilities/text/#text-alignment") More info].
+            .mb-5
+              .row
+                .col-md-3
+                  +Counter("Happy Clients", "2538", "icon-energy icons")
+                .col-md-3
+                  +Counter("Total downloads", "3124", "icon-cup icons")
+                .col-md-3
+                  +Counter("Awards Won", "4128", "icon-fire icons")
+                .col-md-3
+                  +Counter("Theme Users", "5534", "icon-diamond icons")
+            .mb-5
+              a.popup-code(href="#code-counters") Show code &rarr;
+              #code-counters.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-md-3
+                    |     +Counter("Happy Clients", "2538", "icon-energy icons")
+                    |   .col-md-3
+                    |     +Counter("Total downloads", "3124", "icon-cup icons")
+                    |   .col-md-3.text-right
+                    |     +Counter("Awards Won", "4128", "icon-fire icons")
+                    |   .col-md-3.text-center
+                    |     +Counter("Theme Users", "5534", "icon-diamond icons")
+
+          //- Contact ---------------------------
+          .component-block#contact
+            .mb-5
+              hr.mb-5
+              h3 Contact Form
+              p.lead This theme include working ajax contact form, just insert code of the form to any page. Don't forget change mail setting in "assets/php/contact.php" file.
+            .mb-5
+              form#contact-form(method="post" novalidate)
+                .row
+                  .col-md-4
+                    .form-group
+                      input.form-control(type="text" name="name" placeholder="Name" required="")
+                      p.help-block.text-danger
+                  .col-md-4
+                    .form-group
+                      input.form-control(type="email" name="email" placeholder="E-mail" required="")
+                      p.help-block.text-danger
+                  .col-md-4
+                    .form-group
+                      input.form-control(type="text" name="subject" placeholder="Subject" required="")
+                      p.help-block.text-danger
+                  .col-md-12
+                    .form-group
+                      textarea.form-control(name="message" placeholder="Message" rows="12" required="")
+                  .col-md-12
+                    .form-group
+                      input(type="submit" class="btn btn-block btn-brand" value="Send Message")
+              // Ajax response
+              #contact-response.ajax-response.text-center
+
+              pre
+                code.language-php
+                  |// Mail settings
+                  |$to = "yourmail@here.com";
+                  |
+                  |// You can put here your email
+                  |$header = "From: noreply@neomax.com\r\n";
+            .mb-5
+              a.popup-code(href="#code-contact") Show code &rarr;
+              #code-contact.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |form#contact-form(method="post" novalidate)
+                    |   .row
+                    |     .col-md-4
+                    |       .form-group
+                    |         input.form-control(type="text" name="name" placeholder="Name" required="")
+                    |         p.help-block.text-danger
+                    |     .col-md-4
+                    |       .form-group
+                    |         input.form-control(type="email" name="email" placeholder="E-mail" required="")
+                    |         p.help-block.text-danger
+                    |     .col-md-4
+                    |       .form-group
+                    |         input.form-control(type="text" name="subject" placeholder="Subject" required="")
+                    |         p.help-block.text-danger
+                    |     .col-md-12
+                    |         .form-group
+                    |         textarea.form-control(name="message" placeholder="Message" rows="12" required="")
+                    |     .col-md-12
+                    |       .form-group
+                    |         input(type="submit" class="btn btn-block btn-brand" value="Send Message")
+                    |// Ajax response
+                    |#contact-response.ajax-response.text-center
+
+          //- Google Maps -----------------------
+          .component-block#google_maps
+            .mb-5
+              hr.mb-5
+              h3 Google Maps
+              p.lead Show the location of your office using google maps. You can add any number of addresses, just add your latitude and longitude values for each point.
+            .mb-5
+              section.maps-container.vh-2.vh-sm-10.mb-5
+                .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-styles="style-2")
+              section.maps-container.vh-2.vh-sm-10.mb-5
+                .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-styles="style-1")
+              section.maps-container.vh-2.vh-sm-10.mb-5
+                .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15")
+              .row
+                .col-md-6
+                  .maps-container.map-widget.m-b-25
+                    .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-street-view="1")
+                .col-md-6
+                  .maps-container.map-widget.m-b-25
+                    .map(data-addresses="[48.8578708, 2.3587219]" data-info="[Lorem ipsum dolor amet.]" data-icon="assets/images/map-icon.png" data-zoom="15")
+                .col-md-12
+                  p You need to use YOUR own Google API Key. You can get API Key #[a(href="https://developers.google.com/maps/documentation/javascript/get-api-key") here].
+                  pre
+                    code.language-pug
+                      |script(src="http://maps.googleapis.com/maps/api/js?key=YOURAPIKEYHERE")
+            .mb-5
+              a.popup-code(href="#code-google_maps") Show code &rarr;
+              #code-google_maps.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |section.maps-container.vh-2.vh-sm-10.mb-5
+                    |   .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-styles="style-2")
+                    |
+                    |section.maps-container.vh-2.vh-sm-10.mb-5
+                    |   .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-styles="style-1")
+                    |
+                    |section.maps-container.vh-2.vh-sm-10.mb-5
+                    |   .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15")
+                    |
+                    |.row
+                    |   .col-md-6
+                    |     .maps-container.map-widget.m-b-25
+                    |       .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-street-view="1")
+                    |   .col-md-6
+                    |     .maps-container.map-widget.m-b-25
+                    |       .map(data-addresses="[48.8578708, 2.3587219]" data-info="[Lorem ipsum dolor amet.]" data-icon="assets/images/map-icon.png" data-zoom="15")
+
+          //- Grid ------------------------------
+          .component-block#grid
+            .mb-5
+              hr.mb-5
+              h3 Grid
+              p.lead Bootstrap grid includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. #[a(href="https://getbootstrap.com/docs/4.0/layout/grid/") More options].
+            .mb-5
+              .row
+                .col-md-12
+                  .card.bg-secondary.no-shadow
+                    .card-body Full width
+              .row
+                .col-md-6
+                  .card.bg-secondary.no-shadow
+                    .card-body Two columns
+                .col-md-6
+                  .card.bg-secondary.no-shadow
+                    .card-body Two columns
+              .row
+                .col-md-4
+                  .card.bg-secondary.no-shadow
+                    .card-body Three columns
+                .col-md-4
+                  .card.bg-secondary.no-shadow
+                    .card-body Three columns
+                .col-md-4
+                  .card.bg-secondary.no-shadow
+                    .card-body Three columns
+              .row
+                .col-md-3
+                  .card.bg-secondary.no-shadow
+                    .card-body Four columns
+                .col-md-3
+                  .card.bg-secondary.no-shadow
+                    .card-body Four columns
+                .col-md-3
+                  .card.bg-secondary.no-shadow
+                    .card-body Four columns
+                .col-md-3
+                  .card.bg-secondary.no-shadow
+                    .card-body Four columns
+            .mb-5
+              a.popup-code(href="#code-grid") Show code &rarr;
+              #code-grid.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-md-12
+                    |     | Content
+                    |.row
+                    |   .col-md-6
+                    |     | Content
+                    |   .col-md-6
+                    |     | Content
+                    |.row
+                    |   .col-md-4
+                    |     | Content
+                    |   .col-md-4
+                    |     | Content
+                    |   .col-md-4
+                    |     | Content
+                    |.row
+                    |   .col-md-3
+                    |     | Content
+                    |   .col-md-3
+                    |     | Content
+                    |   .col-md-3
+                    |     | Content
+                    |   .col-md-3
+                    |     | Content
+
+          //- Icon with Text --------------------
+          .component-block#iconbox
+            .mb-5
+              hr.mb-5
+              h3 Icon with Text
+              p.lead Tell us about the benefits of your business using text with an icon and Bootstrap 4 grid system.
+            .mb-5
+              .row
+                .col-lg-6.col-md-6
+                  +IconBox("ti-layout", "Visual Composer", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "", true)
+                .col-lg-6.col-md-6
+                  +IconBox("ti-cup", "Revolution Slider", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "", true)
+            .mb-5
+              a.popup-code(href="#code-iconbox") Show code &rarr;
+              #code-iconbox.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-lg-6.col-md-6
+                    |     +IconBox("ti-layout", "Visual Composer", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "", true)
+                    |   .col-lg-6.col-md-6
+                    |     +IconBox("ti-cup", "Revolution Slider", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "text-right", true)
+
+          //- Icons  ----------------------------
+          .component-block#icons
+            .mb-5
+              hr.mb-5
+              h3 Icons
+              p.lead By default, template makes use of the #[a(href="http://themify.me/themify-icons") Themify,] #[a(href="http://simplelineicons.com/") Simple Line Icons] and #[a(href="https://fontawesome.com/icons?d=listing&m=free") Font Awesome Free] icon sets. Example:
+            .mb-5
+              .row
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.icon-user.icons
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.icon-map.icons
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.icon-layers.icons
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.icon-cursor.icons
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.icon-fire.icons
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.icon-present.icons
+              .row
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.ti-pencil
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.ti-crown
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.ti-camera
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.ti-bag
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.ti-music-alt
+                .col
+                  .card.text-center
+                    .card-body
+                      h2.mb-0: i.ti-bell
+              br
+              pre
+                code.language-markup
+                  |&lt;!-- Themify --&gt;
+                  |&lt;i class=&quot;ti-spray&quot;&gt;&lt;/i&gt;
+                  |
+                  |&lt;!-- Simple Line Icons --&gt;
+                  |&lt;i class=&quot;icon-diamond icons&quot;&gt;&lt;/i&gt;
+                  |
+                  |&lt;!-- Font Awesome --&gt;
+                  |&lt;i class=&quot;fab fa-accessible-icon&quot;&gt;&lt;/i&gt;
+
+          //- Inputs ----------------------------
+          .component-block#inputs
+            .mb-5
+              hr.mb-5
+              h3 Inputs
+              p.lead Simple Bootstrap 4 forms designed for our template. #[a(href="https://getbootstrap.com/docs/4.0/components/forms/") More info].
+            .mb-5
+              form
+                .form-group
+                    input.form-control(type="email" placeholder="Email")
+                .form-group
+                    textarea.form-control(rows="5" placeholder="Example textarea")
+                .form-group
+                    select.form-control
+                      option(selected="selected") Select
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+                      option 5
+                .form-group
+                    select.form-control(multiple="")
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+                      option 5
+                .input-group.input-group-quantity
+                  .input-group-prepend
+                    button(class="btn btn-sm btn-brand btn-minus" type="button") -
+                  input(class="form-control form-control-sm form-quantity no-max-width" type="text" value="1" readonly)
+                  .input-group-append
+                    button(class="btn btn-sm btn-brand btn-plus" type="button") +
+            .mb-5
+              a.popup-code(href="#code-inputs") Show code &rarr;
+              #code-inputs.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |form
+                    |   .form-group
+                    |     input.form-control(type="email" placeholder="Email")
+                    |   .form-group
+                    |     textarea.form-control(rows="5" placeholder="Example textarea")
+                    |   .form-group
+                    |     select.form-control
+                    |       option(selected="selected") Select
+                    |       option 1
+                    |       option 2
+                    |       option 3
+                    |       option 4
+                    |       option 5
+                    |   .form-group
+                    |     select.form-control(multiple="")
+                    |       option 1
+                    |       option 2
+                    |       option 3
+                    |       option 4
+                    |       option 5
+                    |   .input-group.input-group-quantity
+                    |     .input-group-prepend
+                    |       button(class="btn btn-sm btn-brand btn-minus" type="button") -
+                    |     input(class="form-control form-control-sm form-quantity no-max-width" type="text" value="1" readonly)
+                    |     .input-group-append
+                    |       button(class="btn btn-sm btn-brand btn-plus" type="button") +
+
+          //- Input sizes -----------------------
+          .component-block#input_sizes
+            .mb-5
+              hr.mb-5
+              h3 Input Sizes
+              p.lead You can use three different sizes of inputs. Large, small and default inputs. #[a(href="https://getbootstrap.com/docs/4.0/components/forms/#sizing") More info].
+            .mb-5
+              .form-group
+                input.form-control.form-control-lg(type="text" placeholder="Large input")
+              .form-group
+                input.form-control(type="text" placeholder="Default input")
+              .form-group
+                input.form-control.form-control-sm(type="text" placeholder="Small input")
+            .mb-5
+              .form-group
+                select.form-control.form-control-lg
+                  option Large select
+              .form-group
+                select.form-control
+                  option Default select
+              .form-group
+                select.form-control.form-control-sm
+                  option Small select
+            .mb-5
+              a.popup-code(href="#code-input_sizes") Show code &rarr;
+              #code-input_sizes.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.form-group
+                    |   input.form-control.form-control-lg(type="text" placeholder="Large input")
+                    |.form-group
+                    |   input.form-control(type="text" placeholder="Default input")
+                    |.form-group
+                    |   input.form-control.form-control-sm(type="text" placeholder="Small input")
+
+          //- Modals ----------------------------
+          .component-block#modals
+            .mb-5
+              hr.mb-5
+              h3 Modals
+              p.lead Use modal component to show any type of content in popup blocks. #[a(href="https://getbootstrap.com/docs/4.0/components/modal/") More info].
+            .mb-5
+              button(class="btn btn-brand" type="button" data-toggle="modal" data-target="#modal-1") Open Modal
+              // Modal
+              #modal-1.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                .modal-dialog(role="document")
+                  .modal-content
+                    .modal-header
+                      h5.modal-title Modal title
+                      button.close(type="button" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true") ×
+                    .modal-body
+                      | ...
+                    .modal-footer
+                      button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+                      button.btn.btn-primary(type="button") Save changes
+            .mb-5
+              a.popup-code(href="#code-modals") Show code &rarr;
+              #code-modals.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |button(class="btn btn-brand" type="button" data-toggle="modal" data-target="#modal-1") Open Modal
+                    |// Modal
+                    |#modal-1.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                    |   .modal-dialog(role="document")
+                    |     .modal-content
+                    |       .modal-header
+                    |         h5.modal-title Modal title
+                    |         button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    |           span(aria-hidden="true") ×
+                    |       .modal-body
+                    |         | ...
+                    |       .modal-footer
+                    |         button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+                    |         button.btn.btn-primary(type="button") Save changes
+
+          //- Number ----------------------------
+          .component-block#number
+            .mb-5
+              hr.mb-5
+              h3 Number Box
+              p.lead Tell us about the benefits of your business using text with an icon and Bootstrap 4 grid system.
+            .mb-5
+              .row
+                .col-md-4
+                  .number-box
+                    h6.number-box-header
+                      span.number-box-number 01
+                      span.number-box-title Development
+                    .number-box-content
+                      p See how your users experience your website in realtime or view trends.
+                .col-md-4
+                  .number-box
+                    h6.number-box-header
+                      span.number-box-number 02
+                      span.number-box-title Branding
+                    .number-box-content
+                      p See how your users experience your website in realtime or view trends.
+                .col-md-4
+                  .number-box
+                    h6.number-box-header
+                      span.number-box-number 03
+                      span.number-box-title Web Design
+                    .number-box-content
+                      p See how your users experience your website in realtime or view trends.
+            .mb-5
+              a.popup-code(href="#code-number") Show code &rarr;
+              #code-number.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-md-4
+                    |     .number-box
+                    |       h6.number-box-header
+                    |         span.number-box-number 01
+                    |         span.number-box-title Development
+                    |       .number-box-content
+                    |         p See how your users experience your website in realtime or view trends.
+                    |   .col-md-4
+                    |     .number-box
+                    |       h6.number-box-header
+                    |         span.number-box-number 02
+                    |         span.number-box-title Development
+                    |       .number-box-content
+                    |         p See how your users experience your website in realtime or view trends.
+
+          //- Pagination ------------------------
+          .component-block#pagination
+            .mb-5
+              hr.mb-5
+              h3 Pagination
+              p.lead Pagination is a standard web component that is used for page navigation. #[a(href="https://getbootstrap.com/docs/4.0/components/pagination/") More info].
+            .mb-5
+              nav
+                ul.pagination
+                  li.page-item: a(href="#" class="page-link"): span.fas.fa-angle-left
+                  li.page-item.active: a(href="#" class="page-link") 1
+                  li.page-item: a(href="#" class="page-link") 2
+                  li.page-item: a(href="#" class="page-link") 3
+                  li.page-item: a(href="#" class="page-link") 4
+                  li.page-item: a(href="#" class="page-link"): span.fas.fa-angle-right
+            .mb-5
+              a.popup-code(href="#code-pagination") Show code &rarr;
+              #code-pagination.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |nav
+                    |   ul.pagination
+                    |     li.page-item: a(href="#" class="page-link"): span.fas.fa-angle-left
+                    |     li.page-item.active: a(href="#" class="page-link") 1
+                    |     li.page-item: a(href="#" class="page-link") 2
+                    |     li.page-item: a(href="#" class="page-link") 3
+                    |     li.page-item: a(href="#" class="page-link") 4
+                    |     li.page-item: a(href="#" class="page-link"): span.fas.fa-angle-right
+
+          //- Pie Chart -------------------------
+          .component-block#pie
+            .mb-5
+              hr.mb-5
+              h3 Pie Chart
+              p.lead Pie chart is easy way to show simple data.
+            .mb-5
+              .row
+                .col-md-4
+                  +PieChart("Web Design", "icon-heart icons", "70", "#2196f3")
+                .col-md-4
+                  +PieChart("Plugin Development", "icon-settings icons", "80", "#2196f3")
+                .col-md-4
+                  +PieChart("Theme Development", "icon-star icons", "90", "#2196f3")
+            .mb-5
+              a.popup-code(href="#code-pie") Show code &rarr;
+              #code-pie.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-md-4
+                    |     +PieChart("Web Design", "icon-heart icons", "70", "#2196f3")
+                    |   .col-md-4
+                    |     +PieChart("Plugin Development", "icon-settings icons", "80", "#2196f3")
+                    |   .col-md-4
+                    |     +PieChart("Theme Development", "icon-star icons", "90", "#2196f3")
+
+          //- Pricing ---------------------------
+          .component-block#pricing
+            .mb-5
+              hr.mb-5
+              h3 Pricing Tables
+              p.lead Our pricing tables allow you to use unique icon for each table, price and description: text or list.
+            .mb-5
+              .row.no-gutters
+                .col-md-6
+                  .price-table.mb-4.mb-md-0
+                    .price-table-header
+                      h2.mb-0 Plus
+                      span $ 7.90 #[small / Per Month]
+                    .price-table-body
+                      ul.list-icons
+                        li #[i.fas.fa-check ] Staff accounts
+                        li #[i.fas.fa-check ] File storage
+                        li #[i.fas.fa-check ] Retail Package
+                        li #[i.fas.fa-check ] 24/7 support
+                        li #[i.fas.fa-check ] Transaction fees
+                        li #[i.fas.fa-check ] Fraud analysis
+                .col-md-6
+                  .price-table.price-table-popular.mb-4.mb-md-0
+                    .price-table-header
+                      h2.mb-0 Premium
+                      span $ 12.99 #[small / Per Month]
+                    .price-table-body
+                      ul.list-icons
+                        li #[i.fas.fa-check ] Staff accounts
+                        li #[i.fas.fa-check ] File storage
+                        li #[i.fas.fa-check ] Retail Package
+                        li #[i.fas.fa-check ] 24/7 support
+                        li #[i.fas.fa-check ] Transaction fees
+                        li #[i.fas.fa-check ] Fraud analysis
+                        li #[i.fas.fa-check ] Manual order creation
+                        li #[i.fas.fa-check ] Discount codes
+                        li #[i.fas.fa-check ] Website and blog
+            .mb-5
+              a.popup-code(href="#code-pricing") Show code &rarr;
+              #code-pricing.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row.no-gutters
+                    |   .col-md-6
+                    |     .price-table.mb-4.mb-md-0
+                    |       .price-table-header
+                    |         h2.mb-0 Plus
+                    |         span $ 7.90 #[small / Per Month]
+                    |       .price-table-body
+                    |         ul.list-icons
+                    |           li \#[i.fas.fa-check ] Staff accounts
+                    |           li \#[i.fas.fa-check ] File storage
+                    |           li \#[i.fas.fa-check ] Retail Package
+                    |           li \#[i.fas.fa-check ] 24/7 support
+                    |           li \#[i.fas.fa-check ] Transaction fees
+                    |           li \#[i.fas.fa-check ] Fraud analysis
+                    |   .col-md-6
+                    |     .price-table.price-table-popular.mb-4.mb-md-0
+                    |       .price-table-header
+                    |         h2.mb-0 Premium
+                    |         span $ 12.99 #[small / Per Month]
+                    |       .price-table-body
+                    |         ul.list-icons
+                    |           li \#[i.fas.fa-check ] Staff accounts
+                    |           li \#[i.fas.fa-check ] File storage
+                    |           li \#[i.fas.fa-check ] Retail Package
+                    |           li \#[i.fas.fa-check ] 24/7 support
+                    |           li \#[i.fas.fa-check ] Transaction fees
+                    |           li \#[i.fas.fa-check ] Fraud analysis
+                    |           li \#[i.fas.fa-check ] Manual order creation
+                    |           li \#[i.fas.fa-check ] Discount codes
+                    |           li \#[i.fas.fa-check ] Website and blog
+
+          //- Preloader -------------------------
+          .component-block#preloader
+            .mb-5
+              hr.mb-5
+              h3 Page Preloader
+              p.lead Easily enable or disable page preloader - just set "true" to "page_loader" var for any page you want. Other way add or remove preloader code in "assest/includes/layout.pug" .
+            .mb-5
+              pre
+                code.language-pug
+                  |block vars
+                  |  - var header_transparent = true;
+                  |  - var page_loader        = true;
+              pre
+                code.language-pug
+                  |// Preloader
+                  |.page-loader
+                  |  .loader
+                  |    .loader-shadow
+                  |    .loader-box
+                  |// Preloader end
+
+          //- Progress Bars ---------------------
+          .component-block#progress
+            .mb-5
+              hr.mb-5
+              h3 Progress Bars
+              p.lead Use progress bar to show your progress, your knowledge or any other data.
+            .mb-5
+              +Progress("Web Development", "25", "bg-brand")
+              +Progress("App Development", "35", "bg-primary")
+              +Progress("Plugin Development", "45", "bg-secondary")
+              +Progress("Theme Development", "55", "bg-success")
+              +Progress("Web Development", "65", "bg-danger")
+              +Progress("App Development", "75", "bg-warning")
+              +Progress("Plugin Development", "85", "bg-info")
+              +Progress("Theme Development", "95", "bg-dark")
+            .mb-5
+              a.popup-code(href="#code-progress") Show code &rarr;
+              #code-progress.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |+Progress("Web Development", "25", "bg-brand")
+                    |+Progress("App Development", "35", "bg-primary")
+                    |+Progress("Plugin Development", "45", "bg-secondary")
+                    |+Progress("Theme Development", "55", "bg-success")
+                    |+Progress("Web Development", "65", "bg-danger")
+                    |+Progress("App Development", "75", "bg-warning")
+                    |+Progress("Plugin Development", "85", "bg-info")
+                    |+Progress("Theme Development", "95", "bg-dark")
+
+          //- Sections --------------------------
+          .component-block#section
+            .mb-5
+              hr.mb-5
+              h3 Sections
+              p.lead Use sections to visually divide the content of your site into separate blocks. #[a(href="https://github.com/nk-o/jarallax") More info].
+            .mb-5
+              section.module.bg-gray.pt-5.pb-5.mb-5
+                .container
+                  .row
+                    .col-md-12
+                      h3.mb-0 Simple Section.
+                      p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+              section.module.bg-dark.parallax.pt-5.pb-5.mb-5(data-background="assets/images/module-1.jpg" data-overlay="0.5")
+                .container
+                  .row
+                    .col-md-12
+                      h3.mb-0 Parallax Section.
+                      p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+              section.module.bg-dark.parallax.pt-5.pb-5.mb-5(data-background="assets/images/module-1.jpg" data-jarallax-video="https://vimeo.com/144698619" data-overlay="0.5")
+                .container
+                  .row
+                    .col-md-12
+                      h3.mb-0 Vimeo Video Section.
+                      p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+              section.module.bg-dark.parallax.pt-5.pb-5.mb-5(data-background="assets/images/module-1.jpg" data-jarallax-video="https://www.youtube.com/watch?v=ARvle-Ei6Sw" data-overlay="0.5")
+                .container
+                  .row
+                    .col-md-12
+                      h3.mb-0 Youtube Video Section.
+                      p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+              section.module.bg-dark.parallax.pt-5.pb-5.mb-5(data-background="assets/images/module-1.jpg" data-jarallax-video="mp4:assets/video/video.mp4,webm:assets/video/video.webm,ogv:assets/video/video.ogv" data-overlay="0.3")
+                .container
+                  .row
+                    .col-md-12
+                      h3.mb-0 Local Video Section.
+                      p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+              section.module.bg-dark.parallax.pt-5.pb-5.mb-5(data-background="assets/images/module-1.jpg" data-overlay="1" data-gradient="1")
+                .container
+                  .row
+                    .col-md-12
+                      h3.mb-0 Gradient Section.
+                      p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+            .mb-5
+              a.popup-code(href="#code-section") Show code &rarr;
+              #code-section.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |section.module
+                    |   | Content
+                    |section.module.bg-gray
+                    |   | Content
+                    |section.module.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-overlay="0.5")
+                    |   | Content
+                    |section.module.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="https://vimeo.com/144698619" data-overlay="0.5")
+                    |   | Content
+                    |section.module.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="https://www.youtube.com/watch?v=ARvle-Ei6Sw" data-overlay="0.5")
+                    |   | Content
+                    |section.module.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="mp4:assets/video/video.mp4,webm:assets/video/video.webm,ogv:assets/video/video.ogv" data-overlay="0.3")
+                    |   | Content
+                    |section.module.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-overlay="1" data-gradient="1")
+                    |   | Content
+
+          //- Slider ----------------------------
+          .component-block#slider
+            .mb-5
+              hr.mb-5
+              h3 Slider
+              p.lead Simple image slider. You can enable or disable navigation, dots and other options. We use owl-carousel JS plugin. Plugin #[a(href="https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html") options].
+            .mb-5
+              .image-slider.owl-carousel(data-carousel-options='{"dots": false, "nav": true, "autoplay": true, "autoplayTimeout": 2000}')
+                img(src="assets/images/module-1.jpg" alt="")
+                img(src="assets/images/module-2.jpg" alt="")
+                img(src="assets/images/module-3.jpg" alt="")
+            .mb-5
+              a.popup-code(href="#code-slider") Show code &rarr;
+              #code-slider.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.image-slider.owl-carousel(data-carousel-options='{"dots": false, "nav": true, "autoplay": true, "autoplayTimeout": 2000}')
+                    |   img(src="assets/images/module-1.jpg" alt="")
+                    |   img(src="assets/images/module-2.jpg" alt="")
+                    |   img(src="assets/images/module-3.jpg" alt="")
+
+          //- Tabs ------------------------------
+          .component-block#tabs
+            .mb-5
+              hr.mb-5
+              h3 Tabs
+              p.lead Use default Bootstrap markup to display Card elements. See the Bootstrap documentation for a full list of options and modifiers. #[a(href="https://getbootstrap.com/docs/4.0/components/navs/#tabs") More info].
+            .mb-5
+              ul.nav.nav-tabs
+                li.nav-item
+                    a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 Visual Composer
+                li.nav-item
+                    a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 Fully Responsive
+                li.nav-item
+                    a.nav-link(data-toggle="tab" href="#tab-1-3"): h6 Great Support
+              .tab-content
+                #tab-1-1.tab-pane.show.active
+                    p Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. Selfies iPhone Kickstarter, drinking vinegar jean shorts fixie consequat flexitarian four loko.
+                    p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi.
+                #tab-1-2.tab-pane
+                    p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi.
+                    p Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. Selfies iPhone Kickstarter, drinking vinegar jean shorts fixie consequat flexitarian four loko.
+                #tab-1-3.tab-pane
+                    p Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. Selfies iPhone Kickstarter, drinking vinegar jean shorts fixie consequat flexitarian four loko.
+                    p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi.
+            .mb-5
+              a.popup-code(href="#code-tabs") Show code &rarr;
+              #code-tabs.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |ul.nav.nav-tabs
+                    |   li.nav-item
+                    |     a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 Visual Composer
+                    |   li.nav-item
+                    |     a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 Fully Responsive
+                    |   li.nav-item
+                    |     a.nav-link(data-toggle="tab" href="#tab-1-3"): h6 Great Support
+                    |.tab-content
+                    |   #tab-1-1.tab-pane.show.active
+                    |     | Content
+                    |   #tab-1-2.tab-pane
+                    |     | Content
+                    |   #tab-1-3.tab-pane
+                    |     | Conteny
+
+          //- Team ------------------------------
+          .component-block#team
+            .mb-5
+              hr.mb-5
+              h3 Team
+              p.lead Team component allow you to show all your team and links to their social profiles.
+            .mb-5
+              .row
+                .col-md-6
+                  +team("assets/images/team/2.jpg", "Emma Connor", "Designer")
+                .col-md-6
+                  +team("assets/images/team/3.jpg", "Richard Bauer", "Developer")
+              .row
+                .col-md-4
+                  +team("assets/images/team/1.jpg", "Emma Connor", "Designer")
+                .col-md-4
+                  +team("assets/images/team/4.jpg", "Richard Bauer", "Developer")
+                .col-md-4
+                  +team("assets/images/team/5.jpg", "Richard Bauer", "Developer")
+            .mb-5
+              a.popup-code(href="#code-team") Show code &rarr;
+              #code-team.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-md-6
+                    |     +team("assets/images/team/2.jpg", "Emma Connor", "Designer")
+                    |   .col-md-6
+                    |     +team("assets/images/team/3.jpg", "Richard Bauer", "Developer")
+
+          //- Testimonials ----------------------
+          .component-block#testimonials
+            .mb-5
+              hr.mb-5
+              h3 Testimonials
+              p.lead Show your customers feedback on your website or services. Available in grid view, carousel view or slider with icon or avatar view.
+            .mb-5
+              .row
+                .col-md-6
+                  +TestimonialsCard("Emma Connor", "See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users.", "assets/images/avatar/1.jpg")
+                .col-md-6
+                  +TestimonialsCard("Sara Smith", "See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users.", "assets/images/avatar/2.jpg")
+
+            hr.mb-5
+
+            .mb-5
+              .review-slides.owl-carousel
+                +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.")
+                +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.")
+                +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.")
+
+            .mb-5
+              a.popup-code(href="#code-testimonials") Show code &rarr;
+              #code-testimonials.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.row
+                    |   .col-md-6
+                    |     +TestimonialsCard("Emma Connor", "See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users.", "assets/images/avatar/1.jpg")
+                    |   .col-md-6
+                    |     +TestimonialsCard("Sara Smith", "See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users.", "assets/images/avatar/2.jpg")
+                pre
+                  code.language-pug
+                    |.review-slides.owl-carousel
+                    |   +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.")
+                    |   +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.")
+                    |   +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.")
+
+          //- Tooltips -------------------------
+          .component-block#tooltips
+            .mb-5
+              hr.mb-5
+              h3 Tooltips
+              p.lead Use tooltips to show a small "hover box" with information about the item being hovered over. #[a(href="https://getbootstrap.com/docs/4.0/components/tooltips/") More info].
+            .mb-5
+              button.btn.btn-sm.btn-brand(type="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top") Tooltip on top
+              button.btn.btn-sm.btn-brand(type="button" data-toggle="tooltip" data-placement="right" title="Tooltip on right") Tooltip on right
+              button.btn.btn-sm.btn-brand(type="button" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom") Tooltip on bottom
+              button.btn.btn-sm.btn-brand(type="button" data-toggle="tooltip" data-placement="left" title="Tooltip on left") Tooltip on left
+            .mb-5
+              a.popup-code(href="#code-tooltips") Show code &rarr;
+              #code-tooltips.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    | button.btn.btn-sm.btn-brand(type="button" data-toggle="tooltip" data-placement="top" title="Tooltip on top") Tooltip on top
+                    | button.btn.btn-sm.btn-brand(type="button" data-toggle="tooltip" data-placement="right" title="Tooltip on right") Tooltip on right
+                    | button.btn.btn-sm.btn-brand(type="button" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom") Tooltip on bottom
+                    | button.btn.btn-sm.btn-brand(type="button" data-toggle="tooltip" data-placement="left" title="Tooltip on left") Tooltip on left
+
+          //- Twitter ---------------------------
+          .component-block#twitter
+            .mb-5
+              hr.mb-5
+              h3 Twitter Feed Widget
+              p.lead The Twitter feed element uses a HTML5 data attribute called 'data-twitter' to determine which feed to display. You can enter your ID. #[a(href="https://github.com/jasonmayes/Twitter-Post-Fetcher") Twitter Post Fetcher].
+            .mb-5
+              p
+                ol
+                  li Go to www.twitter.com and sign in as normal, go to your settings page.
+                  li Go to "Widgets" on the left hand side.
+                  li Create a new widget for what you need eg "user time line" or "search" etc.
+                  li Feel free to check "exclude replies" if you don't want replies in results.
+                  li Now go back to settings page, and then go back to widgets page and
+                  li You should see the widget you just created. Click edit.
+                  li Look at the URL in your web browser, you will see a long number like this: 345735908357048478
+                  li Use this as your ID below instead!
+              br
+              pre
+                code.language-markup
+                  |&lt;!-- Twitter widget--&gt;
+                  |&lt;aside class=&quot;widget twitter-feed-widget&quot;&gt;
+                  |    &lt;div class=&quot;widget-title&quot;&gt;
+                  |        &lt;h6&gt;Twitter Feed&lt;/h6&gt;
+                  |    &lt;/div&gt;
+                  |    &lt;div class=&quot;twitter-feed&quot; data-twitter=&quot;345170787868762112&quot; data-number=&quot;1&quot;&gt;&lt;/div&gt;
+                  |&lt;/aside&gt;
+
+          //- Popup video -----------------------
+          .component-block#popup_video
+            .mb-5
+              hr.mb-5
+              h3 Popup Video
+              p.lead Use this component to show youtube or vimeo videos in popup windows. #[a(href="https://github.com/dimsemenov/Magnific-Popup") Magnific Popup].
+            .mb-5
+              .popup-video
+                img(src="assets/images/module-1.jpg" alt="")
+                a(href="https://www.youtube.com/watch?v=0aCbYxJ9gus" class="popup-video-play")
+            .mb-5
+              a.popup-code(href="#code-popup_video") Show code &rarr;
+              #code-popup_video.code-popup.zoom-anim-dialog.mfp-hide
+                p Example:
+                pre
+                  code.language-pug
+                    |.popup-video
+                    |   img(src="assets/images/module-1.jpg" alt="")
+                    |   a(href="https://www.youtube.com/watch?v=0aCbYxJ9gus" class="popup-video-play")
+
+          //- Video -----------------------------
+          .component-block#video
+            .mb-5
+              hr.mb-5
+              h3 Responsive Video
+              p.lead We use "fitVids" plugin which allow you to use responsive video embeds.
+            .row
+              .col-md-6
+                p: iframe(width="500" height="281" frameborder="0" src="//www.youtube.com/embed/EMy5krGcoOU" allowfullscreen)
+              .col-md-6
+                p: iframe(src="//player.vimeo.com/video/95192276?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
+        .col-md-3
+          ul.nav-sidebar.nav.sticky-sidebar#navbar-1
+            a(href="#alert" class="smoothscroll nav-link") Alert
+            a(href="#accordion" class="smoothscroll nav-link") Accordion
+            a(href="#buttons" class="smoothscroll nav-link") Buttons
+            a(href="#button_sizes" class="smoothscroll nav-link") Button Sizes
+            a(href="#breadcrumb" class="smoothscroll nav-link") Breadcrumb
+            a(href="#card" class="smoothscroll nav-link") Cards
+            a(href="#card_shop" class="smoothscroll nav-link") Cards - Shop
+            a(href="#card_posts" class="smoothscroll nav-link") Cards - Posts
+            a(href="#carousel_image" class="smoothscroll nav-link") Carousel
+            a(href="#clients" class="smoothscroll nav-link") Clients
+            a(href="#counters" class="smoothscroll nav-link") Counters
+            a(href="#contact" class="smoothscroll nav-link") Contact Form
+            a(href="#google_maps" class="smoothscroll nav-link") Google Maps
+            a(href="#grid" class="smoothscroll nav-link") Grid
+            a(href="#iconbox" class="smoothscroll nav-link") Iconbox
+            a(href="#icons" class="smoothscroll nav-link") Icons
+            a(href="#inputs" class="smoothscroll nav-link") Inputs
+            a(href="#input_sizes" class="smoothscroll nav-link") Input Sizes
+            a(href="#modals" class="smoothscroll nav-link") Modals
+            a(href="#number" class="smoothscroll nav-link") Number Box
+            a(href="#pagination" class="smoothscroll nav-link") Pagination
+            a(href="#pie" class="smoothscroll nav-link") Pie Chart
+            a(href="#pricing" class="smoothscroll nav-link") Pricing Tables
+            a(href="#preloader" class="smoothscroll nav-link") Preloader
+            a(href="#progress" class="smoothscroll nav-link") Progress Bars
+            a(href="#section" class="smoothscroll nav-link") Sections
+            a(href="#slider" class="smoothscroll nav-link") Sliders
+            a(href="#tabs" class="smoothscroll nav-link") Tabs
+            a(href="#team" class="smoothscroll nav-link") Team
+            a(href="#testimonials" class="smoothscroll nav-link") Testimonials
+            a(href="#tooltips" class="smoothscroll nav-link") Tooltips
+            a(href="#twitter" class="smoothscroll nav-link") Twitter Feed
+            a(href="#popup_video" class="smoothscroll nav-link") Popup Video
+            a(href="#video" class="smoothscroll nav-link") Video

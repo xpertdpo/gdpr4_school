@@ -1,0 +1,82 @@
+extends include/templates/layout
+
+block vars
+  //- var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  //section.module-cover.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-overlay="1" data-gradient="1")
+    .container
+
+      .row
+        .col-md-12.m-auto.text-center
+          h1 Contact Us
+          p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque eget mi at eros venenatis
+  // Hero end
+
+  = "\n"
+
+  // Map
+  section.maps-container.vh-4.vh-sm-10
+    .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15")
+  // Map end
+
+  = "\n"
+
+  // Contact
+  section.module.pt-0
+    .container
+
+      .row
+        .col-md-8.order-md-2
+          .space(data-mb="-100px")
+          .card.card-xl.z-index-10
+            .card-body
+              form#contact-form(method="post" novalidate)
+                .row
+                  .col-md-6
+                    .form-group
+                      input.form-control(type="text" name="name" placeholder="Name" required="")
+                      p.help-block.text-danger
+                  .col-md-6
+                    .form-group
+                      input.form-control(type="email" name="email" placeholder="E-mail" required="")
+                      p.help-block.text-danger
+                  .col-md-12
+                    .form-group
+                      input.form-control(type="text" name="subject" placeholder="Subject" required="")
+                      p.help-block.text-danger
+                  .col-md-12
+                    .form-group
+                      textarea.form-control(name="message" placeholder="Message" rows="12" required="")
+                  .col-md-12
+                    input(type="submit" class="btn btn-block btn-brand" value="Send Message")
+              // Ajax response
+              #contact-response.ajax-response.text-center
+        .col-md-2.order-md-1
+          .mt-5
+            ul.list-unstyled
+              li: h6.text-uppercase #[span.small.bold Phone]
+              li +123-45-67-89
+            ul.list-unstyled
+              li: h6.text-uppercase #[span.small.bold Location]
+              li 12 London Avenue, Suite 18
+            ul.list-unstyled
+              li: h6.text-uppercase #[span.small.bold E-mail]
+              li team@email.com
+        .col-md-2.order-md-3
+          .mt-5
+            ul.list-unstyled
+              li: h6.text-uppercase #[span.small.bold Fax]
+              li +123-45-67-89
+            ul.list-unstyled
+              li: h6.text-uppercase #[span.small.bold Social]
+              li
+                ul.social-icons
+                  li: a(href="#") #[i.ti-twitter]
+                  li: a(href="#") #[i.ti-instagram]
+                  li: a(href="#") #[i.ti-pinterest]
+  // Contact end

@@ -1,0 +1,54 @@
+//
+// Blog
+//
+
+.article-thumb {
+  position: relative;
+  overflow: hidden;
+
+  @extend .shadow;
+
+  &:after {
+    background: linear-gradient(to bottom, rgba(#333, .05) 0%, rgba(#333, .85) 100%);
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: $border-radius;
+  }
+}
+
+.article-header {
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  .article-meta {
+    opacity: .9;
+  }
+}
+
+.article {
+
+  h1, h2, h3, h4, h5, h6 {
+
+    &:not(:first-child) {
+      margin-top: $paragraph-margin-bottom * 2;
+    }
+  }
+
+  p:not(:first-child) img {
+    margin-top: $paragraph-margin-bottom * 1.5;
+    margin-bottom: $paragraph-margin-bottom * 1.5;
+  }
+
+  blockquote:not(:first-child) {
+    margin-top: $paragraph-margin-bottom * 2;
+    margin-bottom: $paragraph-margin-bottom * 2;
+  }
+}

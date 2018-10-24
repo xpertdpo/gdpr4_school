@@ -1,0 +1,119 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  section.module-cover.bg-dark.parallax(data-background="" data-overlay="1" data-gradient="1")
+    .container
+
+      .row
+        .col-md-8.m-auto.text-center
+          h1.mb-5 How can we help?
+          .card.card-sm
+            .card-body
+              .form-row
+                .col
+                  .form-group.relative.mb-0
+                    input(class="form-control border-0" type="text" placeholder="Ask a question")
+                .col-auto
+                  a(class="btn btn-brand" href="#"): i.fas.fa-search
+  // Hero end
+
+  = "\n"
+
+  // Support
+  section.module
+      .container
+
+        .row
+          .col-md-10.col-lg-6.m-auto.text-center
+            h2 Popular help topics
+            p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+        .row
+          .col-md-12
+            .space(data-mt="60px")
+
+        .row
+          .col-md-4
+            .card.card-lg.border.mb-4
+              .card-header
+                h6.mb-0 Statistics
+              .card-body
+                ul.list-unstyled.mb-0
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] What is Item Support?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Where Is My Purchase Code?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Bundled Plugins
+                  li: a(href="#") #[i.far.fa-file-alt.pr-1] How to contact an author
+          .col-md-4
+            .card.card-lg.border.mb-4
+              .card-header
+                h6.mb-0 Conversations
+              .card-body
+                ul.list-unstyled.mb-0
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] What is Item Support?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Where Is My Purchase Code?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Bundled Plugins
+                  li: a(href="#") #[i.far.fa-file-alt.pr-1] How to contact an author
+          .col-md-4
+            .card.card-lg.border.mb-4
+              .card-header
+                h6.mb-0 Payments
+              .card-body
+                ul.list-unstyled.mb-0
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] What is Item Support?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Where Is My Purchase Code?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Bundled Plugins
+                  li: a(href="#") #[i.far.fa-file-alt.pr-1] How to contact an author
+          .col-md-4
+            .card.card-lg.border.mb-4
+              .card-header
+                h6.mb-0 Statistics
+              .card-body
+                ul.list-unstyled.mb-0
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] What is Item Support?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Where Is My Purchase Code?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Bundled Plugins
+                  li: a(href="#") #[i.far.fa-file-alt.pr-1] How to contact an author
+          .col-md-4
+            .card.card-lg.border.mb-4
+              .card-header
+                h6.mb-0 Conversations
+              .card-body
+                ul.list-unstyled.mb-0
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] What is Item Support?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Where Is My Purchase Code?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Bundled Plugins
+                  li: a(href="#") #[i.far.fa-file-alt.pr-1] How to contact an author
+          .col-md-4
+            .card.card-lg.border.mb-4
+              .card-header
+                h6.mb-0 Payments
+              .card-body
+                ul.list-unstyled.mb-0
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] What is Item Support?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Where Is My Purchase Code?
+                  li.mb-2: a(href="#") #[i.far.fa-file-alt.pr-1] Bundled Plugins
+                  li: a(href="#") #[i.far.fa-file-alt.pr-1] How to contact an author
+
+        .row
+            .col-md-12
+              .space(data-mb="40px")
+
+        .row
+          .col-md-12
+            .text-center
+              p.lead Still no luck? #[a(href="contact-1.html") We can help! &rarr;]
+  // Support end
+
+
+
+
+
+
+

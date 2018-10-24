@@ -1,0 +1,84 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  section.module-cover.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-overlay="1" data-gradient="1")
+    .container
+
+      .row
+        .col-md-12.m-auto.text-center
+          h1 FAQ
+          p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque eget mi at eros venenatis
+  // Hero end
+
+  = "\n"
+
+  // FAQ
+  section.module
+    .container
+
+      .row
+        .col-lg-3
+          .list-group.mb-5
+            a.list-group-item.list-group-item-action.active(href="#") Can't log in to Pinterest
+            a.list-group-item.list-group-item-action(href="#") Find missing Pins or boards
+            a.list-group-item.list-group-item-action(href="#") Reset your password
+            a.list-group-item.list-group-item-action(href="#") Log out of Pinterest
+            a.list-group-item.list-group-item-action(href="#") Edit your settings
+            a.list-group-item.list-group-item-action(href="#") Following and unfollowing
+            a.list-group-item.list-group-item-action(href="#") Safe mode
+            a.list-group-item.list-group-item-action(href="#") Reactivate or deactivate
+
+          .card.card-lg.border.no-shadow
+            .card-header
+              h6.mb-0 Need Help!
+            .card-body
+              p See how your users experience your website in realtime or view trends.
+              p: a(href="#") Contact us &rarr;
+
+        .col-lg-8
+          #accordion1.accordion
+            .accordion-item
+              .accordion-item-header
+                h6: a(class="accordion-link" data-toggle="collapse" href="#collapse-1") Where is my order?
+              #collapse-1.collapse.show(data-parent="#accordion1")
+                .accordion-item-body
+                  p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi.
+                  p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+            .accordion-item
+              .accordion-item-header
+                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-2") Where do you ship?
+              #collapse-2.collapse(data-parent="#accordion1")
+                .accordion-item-body
+                  p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+            .accordion-item
+              .accordion-item-header
+                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-3") How do i return an item?
+              #collapse-3.collapse(data-parent="#accordion1")
+                .accordion-item-body
+                  p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+            .accordion-item
+              .accordion-item-header
+                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-4") Where is my order?
+              #collapse-4.collapse(data-parent="#accordion1")
+                .accordion-item-body
+                  p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+            .accordion-item
+              .accordion-item-header
+                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5") Where do you ship?
+              #collapse-5.collapse(data-parent="#accordion1")
+                .accordion-item-body
+                  p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+            .accordion-item
+              .accordion-item-header
+                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-6") How do i return an item?
+              #collapse-6.collapse(data-parent="#accordion1")
+                .accordion-item-body
+                  p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+  // FAQ end

@@ -1,0 +1,14 @@
+//
+// Navbar
+//
+
+.navbar {
+  letter-spacing: $navbar-letter-spacing;
+  font-size: $navbar-font-size;
+  transform: translate3d(0, 0, 0);
+}
+
+.navbar-transparent {
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  transition: background 0.3s ease-out;
+}

@@ -1,0 +1,7 @@
+//
+// Breadcrumb
+//
+
+.breadcrumb-item + .breadcrumb-item::before {
+  opacity: .4;
+}

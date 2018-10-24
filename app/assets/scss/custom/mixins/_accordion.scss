@@ -1,0 +1,14 @@
+//
+// Custom Accordion variants
+//
+
+@mixin accordion-variant($background) {
+  .accordion-item-header {
+    background: $background;
+
+    h6 a {
+      color: color-yiq($background);
+    }
+  }
+}
+

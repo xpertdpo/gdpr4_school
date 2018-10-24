@@ -1,0 +1,62 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  section.module-cover.bg-dark.parallax(data-background="assets/images/module-1.jpg" data-overlay="1" data-gradient="1")
+    .container
+
+      .row
+        .col-md-12.text-center
+          h1 Shop Grid
+          p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque eget mi at eros venenatis
+  // Hero end
+
+  = "\n"
+
+  // Shop
+  section.module
+    .container
+
+      .row
+        .col-md-12
+          +ShopGridItem("assets/images/shop/10.jpg", "Floral Scented Sachet", "$20.00", true)
+        .col-md-4
+          +ShopGridItem("assets/images/shop/1.jpg", "Classic Chair", "$20.00")
+        .col-md-4
+          +ShopGridItem("assets/images/shop/5.jpg", "Solo Headphones", "$30.00")
+        .col-md-4
+          +ShopGridItem("assets/images/shop/4.jpg", "Amber Body Lotion", "$35.00")
+        .col-md-4
+          +ShopGridItem("assets/images/shop/6.jpg", "Ceramic Watch", "$18.00")
+        .col-md-4
+          +ShopGridItem("assets/images/shop/7.jpg", "Wooden Bathroom Set", "$12.00")
+        .col-md-4
+          +ShopGridItem("assets/images/shop/8.jpg", "Sweet Slippers", "$34.00")
+        .col-md-4
+          +ShopGridItem("assets/images/shop/9.jpg", "Plain Glass Bottle", "$28.00")
+        .col-md-4
+          +ShopGridItem("assets/images/shop/2.jpg", "Thermo Flask", "$13.00")
+        .col-md-4
+          +ShopGridItem("assets/images/shop/3.jpg", "Folder Calendar", "$10.99")
+
+      .row
+        .col-md-12
+          .space(data-mb="40px")
+
+      .row
+        .col-md-12
+          nav
+            ul.pagination.justify-content-center
+              li.page-item: a(href="#" class="page-link"): span.fas.fa-angle-left
+              li.page-item.active: a(href="#" class="page-link") 1
+              li.page-item: a(href="#" class="page-link") 2
+              li.page-item: a(href="#" class="page-link") 3
+              li.page-item: a(href="#" class="page-link") 4
+              li.page-item: a(href="#" class="page-link"): span.fas.fa-angle-right
+  // Shop end

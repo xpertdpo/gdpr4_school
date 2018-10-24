@@ -1,0 +1,59 @@
+//
+// Testimonials
+//
+
+.review-slides {
+  text-align: center;
+  padding: 0 40px;
+
+  blockquote {
+    letter-spacing: rem(.6);
+    padding: 20px 0;
+    margin: 0;
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .blockquote-footer {
+    letter-spacing: rem(.5px);
+    opacity: .8;
+  }
+
+  .blockquote-footer::before {
+    content: '';
+  }
+}
+
+.review-slides .review-icons {
+  margin: 0 auto 10px;
+  width: 80px;
+
+  img {
+    border: 6px solid rgba(color("white"), .1);
+    border-radius: 50%;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+
+  .review-slides {
+    .owl-next,
+    .owl-prev {
+      display: none;
+    }
+  }
+
+}
+
+//
+// Stars Rating
+//
+
+.star-rating {
+  letter-spacing: rem(4px);
+  font-size: $font-size-base * .85;
+  color: #f1c40f;
+  color: theme-color("brand");
+}
