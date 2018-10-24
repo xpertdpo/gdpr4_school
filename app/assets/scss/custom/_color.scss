@@ -1,9 +1,0 @@
-//
-// Colors
-//
-
-@each $color, $value in $theme-colors {
-  .bg-#{$color}:not(.navbar) {
-    @include bg-text-variant($value);
-  }
-}
